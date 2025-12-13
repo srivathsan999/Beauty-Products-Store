@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Beauty Store</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#F4C2C2',
+              secondary: '#FFF4F4',
+              accent: '#C65B7C',
+              'text-dark': '#2A2A2A',
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 glass-strong border-b border-white/20 dark:border-gray-700/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">B</span>
+                    </div>
+                    <span class="font-heading text-xl font-bold text-text-dark dark:text-white">BeautyStore</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Home</a>
+                    <a href="shop.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Shop</a>
+                    <div class="relative group">
+                        <button class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center">
+                            Categories
+                            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div class="py-2">
+                                <a href="skincare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Skincare</a>
+                                <a href="makeup.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Makeup</a>
+                                <a href="haircare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Haircare</a>
+                                <a href="fragrance.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Fragrance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="blog.html" class="text-accent font-medium">Blog</a>
+                    <a href="about.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">About</a>
+                    <a href="contact.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                    <a href="cart.html" class="relative p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span class="cart-count absolute top-0 right-0 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+                    </a>
+                    <button id="theme-toggle" class="p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <a href="login.html" class="hidden md:block px-4 py-2 text-accent hover:text-accent/80 font-medium">Login</a>
+                    <a href="register.html" class="hidden md:block btn-primary">Register</a>
+                    <button id="mobile-menu-button" class="md:hidden p-2 text-text-dark dark:text-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home</a>
+                    <a href="shop.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Shop</a>
+                    <a href="blog.html" class="px-4 py-2 text-accent font-semibold">Blog</a>
+                    <a href="about.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">About</a>
+                    <a href="contact.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Contact</a>
+                    <a href="login.html" class="px-4 py-2 text-accent">Login</a>
+                    <a href="register.html" class="px-4 py-2 btn-primary text-center">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Page -->
+    <section class="section-container">
+        <!-- Blog Header -->
+        <div class="text-center mb-12 fade-on-scroll">
+            <h1 class="section-title">Beauty Blog</h1>
+            <p class="section-subtitle">Discover the latest beauty tips, trends, and expert advice to enhance your beauty routine.</p>
+        </div>
+
+        <!-- Featured Post -->
+        <div class="mb-16 fade-on-scroll">
+            <div class="product-card overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                    <div class="aspect-video lg:aspect-auto">
+                        <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800" alt="Featured Post" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 lg:p-12 flex flex-col justify-center">
+                        <span class="text-accent font-semibold text-sm mb-2">FEATURED ARTICLE</span>
+                        <h2 class="text-3xl font-heading font-bold mb-4">10 Essential Skincare Tips for Glowing Skin</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">Discover expert skincare secrets that will transform your routine and give you that radiant glow you've been dreaming of. From morning to night, learn the best practices for healthy, beautiful skin.</p>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="flex items-center gap-2">
+                                <div class="w-10 h-10 bg-primary rounded-full"></div>
+                                <div>
+                                    <p class="font-semibold text-sm">Sarah Johnson</p>
+                                    <p class="text-xs text-gray-500">Beauty Expert</p>
+                                </div>
+                            </div>
+                            <span class="text-sm text-gray-500">January 15, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Posts Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Blog Post 1 -->
+            <article class="product-card fade-on-scroll">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Blog Post" class="w-full h-48 object-cover">
+                </a>
+                <div class="p-6">
+                    <span class="text-accent font-semibold text-xs">SKINCARE</span>
+                    <a href="#"><h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">How to Build the Perfect Skincare Routine</h3></a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Learn the step-by-step process of creating a skincare routine that works for your unique skin type and concerns.</p>
+                    <div class="text-sm text-gray-500">
+                        <span>January 12, 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="product-card fade-on-scroll">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400" alt="Blog Post" class="w-full h-48 object-cover">
+                </a>
+                <div class="p-6">
+                    <span class="text-accent font-semibold text-xs">MAKEUP</span>
+                    <a href="#"><h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">Makeup Trends for 2025</h3></a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Explore the hottest makeup trends that are taking the beauty world by storm this year.</p>
+                    <div class="text-sm text-gray-500">
+                        <span>January 10, 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="product-card fade-on-scroll">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Blog Post" class="w-full h-48 object-cover">
+                </a>
+                <div class="p-6">
+                    <span class="text-accent font-semibold text-xs">HAIRCARE</span>
+                    <a href="#"><h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">Natural Hair Care Remedies</h3></a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Discover natural ingredients and DIY treatments that can transform your hair health.</p>
+                    <div class="text-sm text-gray-500">
+                        <span>January 8, 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Post 4 -->
+            <article class="product-card fade-on-scroll">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400" alt="Blog Post" class="w-full h-48 object-cover">
+                </a>
+                <div class="p-6">
+                    <span class="text-accent font-semibold text-xs">WELLNESS</span>
+                    <a href="#"><h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">Beauty From Within: Nutrition Tips</h3></a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">How your diet affects your skin and hair, plus foods that promote natural beauty.</p>
+                    <div class="text-sm text-gray-500">
+                        <span>January 5, 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Post 5 -->
+            <article class="product-card fade-on-scroll">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=400" alt="Blog Post" class="w-full h-48 object-cover">
+                </a>
+                <div class="p-6">
+                    <span class="text-accent font-semibold text-xs">TUTORIAL</span>
+                    <a href="#"><h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">5-Minute Morning Beauty Routine</h3></a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Quick and effective beauty routine for busy mornings that keeps you looking great.</p>
+                    <div class="text-sm text-gray-500">
+                        <span>January 3, 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Post 6 -->
+            <article class="product-card fade-on-scroll">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400" alt="Blog Post" class="w-full h-48 object-cover">
+                </a>
+                <div class="p-6">
+                    <span class="text-accent font-semibold text-xs">FRAGRANCE</span>
+                    <a href="#"><h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">How to Choose Your Signature Scent</h3></a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">A complete guide to finding the perfect fragrance that matches your personality.</p>
+                    <div class="text-sm text-gray-500">
+                        <span>January 1, 2025</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center items-center gap-2">
+            <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">Previous</button>
+            <button class="px-4 py-2 rounded-lg bg-accent text-white">1</button>
+            <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">2</button>
+            <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">3</button>
+            <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">Next</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+                <div>
+                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">B</span>
+                        </div>
+                        <span class="font-heading text-xl font-bold">BeautyStore</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Your trusted beauty destination for premium products and expert care.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Home</a></li>
+                        <li><a href="shop.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shop</a></li>
+                        <li><a href="about.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Policies</h3>
+                    <ul class="space-y-2">
+                        <li><a href="privacy.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Return Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Stay Connected</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Subscribe to get special offers and updates</p>
+                    <form class="flex flex-col gap-2">
+                        <input type="email" placeholder="Your email" class="input-field text-sm" required>
+                        <button type="submit" class="btn-primary text-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-600 dark:text-gray-400 text-sm">&copy; 2025 BeautyStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

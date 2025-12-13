@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Beauty Store</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#F4C2C2',
+              secondary: '#FFF4F4',
+              accent: '#C65B7C',
+              'text-dark': '#2A2A2A',
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 glass-strong border-b border-white/20 dark:border-gray-700/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">B</span>
+                    </div>
+                    <span class="font-heading text-xl font-bold text-text-dark dark:text-white">BeautyStore</span>
+                </a>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Page Content -->
+    <section class="section-container">
+        <h1 class="section-title text-3xl mb-8">Checkout</h1>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Checkout Form -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Billing Information -->
+                <div class="glass-strong rounded-2xl p-8">
+                    <h2 class="font-heading text-2xl font-bold mb-6">Billing Information</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block font-semibold mb-2">First Name *</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Last Name *</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block font-semibold mb-2">Email *</label>
+                            <input type="email" class="input-field" required>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block font-semibold mb-2">Phone *</label>
+                            <input type="tel" class="input-field" required>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block font-semibold mb-2">Address *</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">City *</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">State *</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">ZIP Code *</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Country *</label>
+                            <select class="input-field" required>
+                                <option>United States</option>
+                                <option>Canada</option>
+                                <option>United Kingdom</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shipping Information -->
+                <div class="glass-strong rounded-2xl p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="font-heading text-2xl font-bold">Shipping Information</h2>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="rounded border-gray-300 text-accent focus:ring-accent">
+                            <span class="ml-2 text-sm">Same as billing</span>
+                        </label>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="md:col-span-2">
+                            <label class="block font-semibold mb-2">Address *</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">City *</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">State *</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">ZIP Code *</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Country *</label>
+                            <select class="input-field" required>
+                                <option>United States</option>
+                                <option>Canada</option>
+                                <option>United Kingdom</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="glass-strong rounded-2xl p-8">
+                    <h2 class="font-heading text-2xl font-bold mb-6">Payment Method</h2>
+                    <div class="space-y-4">
+                        <label class="flex items-center p-4 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer hover:border-accent">
+                            <input type="radio" name="payment" value="card" class="text-accent focus:ring-accent" checked>
+                            <div class="ml-4">
+                                <p class="font-semibold">Credit/Debit Card</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Pay securely with your card</p>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-4 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer hover:border-accent">
+                            <input type="radio" name="payment" value="paypal" class="text-accent focus:ring-accent">
+                            <div class="ml-4">
+                                <p class="font-semibold">PayPal</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Pay with your PayPal account</p>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-4 border-2 border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer hover:border-accent">
+                            <input type="radio" name="payment" value="cod" class="text-accent focus:ring-accent">
+                            <div class="ml-4">
+                                <p class="font-semibold">Cash on Delivery</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Pay when you receive</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Card Details -->
+                    <div id="card-details" class="mt-6 space-y-4">
+                        <div>
+                            <label class="block font-semibold mb-2">Card Number *</label>
+                            <input type="text" placeholder="1234 5678 9012 3456" class="input-field" maxlength="19">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-semibold mb-2">Expiry Date *</label>
+                                <input type="text" placeholder="MM/YY" class="input-field" maxlength="5">
+                            </div>
+                            <div>
+                                <label class="block font-semibold mb-2">CVV *</label>
+                                <input type="text" placeholder="123" class="input-field" maxlength="4">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Cardholder Name *</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="lg:col-span-1">
+                <div class="glass-strong rounded-2xl p-6 sticky top-24">
+                    <h2 class="font-heading text-2xl font-bold mb-6">Order Summary</h2>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=100" alt="Product" class="w-16 h-16 object-cover rounded-lg">
+                            <div class="flex-grow">
+                                <h3 class="font-semibold">Luxury Face Serum</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Quantity: 1</p>
+                                <p class="text-accent font-semibold">$49.99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 dark:border-gray-700 pt-4 space-y-3 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600 dark:text-gray-400">Subtotal</span>
+                            <span class="font-semibold">$49.99</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600 dark:text-gray-400">Shipping</span>
+                            <span class="font-semibold">$5.99</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600 dark:text-gray-400">Tax</span>
+                            <span class="font-semibold">$5.00</span>
+                        </div>
+                        <div class="flex justify-between text-lg font-bold pt-4 border-t border-gray-200 dark:border-gray-700">
+                            <span>Total</span>
+                            <span class="text-accent">$60.98</span>
+                        </div>
+                    </div>
+                    <button onclick="alert('Order placed successfully!')" class="btn-primary w-full">Place Order</button>
+                    <a href="cart.html" class="btn-outline w-full text-center block mt-3">Back to Cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+                <div>
+                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">B</span>
+                        </div>
+                        <span class="font-heading text-xl font-bold">BeautyStore</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Your trusted beauty destination for premium products and expert care.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Home</a></li>
+                        <li><a href="shop.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shop</a></li>
+                        <li><a href="about.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Policies</h3>
+                    <ul class="space-y-2">
+                        <li><a href="privacy.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Return Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Stay Connected</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Subscribe to get special offers and updates</p>
+                    <form class="flex flex-col gap-2">
+                        <input type="email" placeholder="Your email" class="input-field text-sm" required>
+                        <button type="submit" class="btn-primary text-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-600 dark:text-gray-400 text-sm">&copy; 2025 BeautyStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

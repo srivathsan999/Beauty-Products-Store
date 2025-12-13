@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Store - Home</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#F4C2C2',
+              secondary: '#FFF4F4',
+              accent: '#C65B7C',
+              'text-dark': '#2A2A2A',
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 glass-strong border-b border-white/20 dark:border-gray-700/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">B</span>
+                    </div>
+                    <span class="font-heading text-xl font-bold text-text-dark dark:text-white">BeautyStore</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Home</a>
+                    <a href="shop.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Shop</a>
+                    
+                    <!-- Categories Dropdown -->
+                    <div class="relative group">
+                        <button class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center">
+                            Categories
+                            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div class="py-2">
+                                <a href="skincare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Skincare</a>
+                                <a href="makeup.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Makeup</a>
+                                <a href="haircare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Haircare</a>
+                                <a href="fragrance.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Fragrance</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="blog.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Blog</a>
+                    <a href="about.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">About</a>
+                    <a href="contact.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Contact</a>
+                </div>
+
+                <!-- Right Side Icons -->
+                <div class="flex items-center space-x-4">
+                    <!-- Search -->
+                    <button class="p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Cart -->
+                    <a href="cart.html" class="relative p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span class="cart-count absolute top-0 right-0 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+                    </a>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Login -->
+                    <a href="login.html" class="hidden md:block px-4 py-2 text-accent hover:text-accent/80 font-medium">Login</a>
+                    <a href="register.html" class="hidden md:block btn-primary">Register</a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 text-text-dark dark:text-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home</a>
+                    <a href="shop.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Shop</a>
+                    <a href="blog.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Blog</a>
+                    <a href="about.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">About</a>
+                    <a href="contact.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Contact</a>
+                    <a href="login.html" class="px-4 py-2 text-accent">Login</a>
+                    <a href="register.html" class="px-4 py-2 btn-primary text-center">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-800"></div>
+        <div class="absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1920'); background-size: cover; background-position: center; opacity: 0.3;"></div>
+        <div class="relative z-10 glass-strong rounded-2xl p-8 md:p-12 max-w-4xl mx-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4 text-text-dark dark:text-white">Discover Your Natural Beauty</h1>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8">Premium beauty products curated for you</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="shop.html" class="btn-primary inline-block text-center">Shop Now</a>
+                <a href="#categories" class="btn-outline inline-block text-center">Explore Categories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section id="categories" class="section-container">
+        <h2 class="section-title">Featured Categories</h2>
+        <p class="section-subtitle">Browse our wide range of beauty products</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <a href="skincare.html" class="product-card group text-center p-6 fade-on-scroll">
+                <div class="w-24 h-24 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <svg class="w-12 h-12 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg">Skincare</h3>
+            </a>
+            <a href="makeup.html" class="product-card group text-center p-6 fade-on-scroll">
+                <div class="w-24 h-24 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <svg class="w-12 h-12 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg">Makeup</h3>
+            </a>
+            <a href="haircare.html" class="product-card group text-center p-6 fade-on-scroll">
+                <div class="w-24 h-24 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <svg class="w-12 h-12 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg">Haircare</h3>
+            </a>
+            <a href="fragrance.html" class="product-card group text-center p-6 fade-on-scroll">
+                <div class="w-24 h-24 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <svg class="w-12 h-12 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg">Fragrance</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="section-container bg-white dark:bg-gray-800">
+        <h2 class="section-title">Best Sellers</h2>
+        <p class="section-subtitle">Our most loved products</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="product-card equal-height fade-on-scroll">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Product" class="w-full h-64 object-cover">
+                <div class="p-4 equal-height-content">
+                    <h3 class="font-semibold text-lg mb-2">Luxury Face Serum</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★★★★★</span>
+                        </div>
+                        <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(128)</span>
+                    </div>
+                    <p class="text-accent font-bold text-xl mb-4">$49.99</p>
+                    <button onclick="addToCart(1, 'Luxury Face Serum', 49.99, 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400')" class="btn-primary w-full">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card equal-height fade-on-scroll">
+                <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400" alt="Product" class="w-full h-64 object-cover">
+                <div class="p-4 equal-height-content">
+                    <h3 class="font-semibold text-lg mb-2">Vitamin C Cream</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★★★★★</span>
+                        </div>
+                        <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(95)</span>
+                    </div>
+                    <p class="text-accent font-bold text-xl mb-4">$39.99</p>
+                    <button onclick="addToCart(2, 'Vitamin C Cream', 39.99, 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400')" class="btn-primary w-full">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card equal-height fade-on-scroll">
+                <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Product" class="w-full h-64 object-cover">
+                <div class="p-4 equal-height-content">
+                    <h3 class="font-semibold text-lg mb-2">Hydrating Face Mask</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★★★★☆</span>
+                        </div>
+                        <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(87)</span>
+                    </div>
+                    <p class="text-accent font-bold text-xl mb-4">$34.99</p>
+                    <button onclick="addToCart(3, 'Hydrating Face Mask', 34.99, 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400')" class="btn-primary w-full">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card equal-height fade-on-scroll">
+                <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400" alt="Product" class="w-full h-64 object-cover">
+                <div class="p-4 equal-height-content">
+                    <h3 class="font-semibold text-lg mb-2">Rose Lip Balm</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★★★★★</span>
+                        </div>
+                        <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(156)</span>
+                    </div>
+                    <p class="text-accent font-bold text-xl mb-4">$12.99</p>
+                    <button onclick="addToCart(4, 'Rose Lip Balm', 12.99, 'https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400')" class="btn-primary w-full">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="section-container">
+        <h2 class="section-title">New Arrivals</h2>
+        <p class="section-subtitle">Latest additions to our collection</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="product-card equal-height fade-on-scroll">
+                <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=400" alt="Product" class="w-full h-64 object-cover">
+                <div class="p-4 equal-height-content">
+                    <h3 class="font-semibold text-lg mb-2">Glowing Primer</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★★★★☆</span>
+                        </div>
+                        <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(42)</span>
+                    </div>
+                    <p class="text-accent font-bold text-xl mb-4">$29.99</p>
+                    <button onclick="addToCart(5, 'Glowing Primer', 29.99, 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=400')" class="btn-primary w-full">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card equal-height fade-on-scroll">
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400" alt="Product" class="w-full h-64 object-cover">
+                <div class="p-4 equal-height-content">
+                    <h3 class="font-semibold text-lg mb-2">Matte Foundation</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★★★★★</span>
+                        </div>
+                        <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(73)</span>
+                    </div>
+                    <p class="text-accent font-bold text-xl mb-4">$45.99</p>
+                    <button onclick="addToCart(6, 'Matte Foundation', 45.99, 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400')" class="btn-primary w-full">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card equal-height fade-on-scroll">
+                <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400" alt="Product" class="w-full h-64 object-cover">
+                <div class="p-4 equal-height-content">
+                    <h3 class="font-semibold text-lg mb-2">Mascara Pro</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★★★★☆</span>
+                        </div>
+                        <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(58)</span>
+                    </div>
+                    <p class="text-accent font-bold text-xl mb-4">$24.99</p>
+                    <button onclick="addToCart(7, 'Mascara Pro', 24.99, 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400')" class="btn-primary w-full">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card equal-height fade-on-scroll">
+                <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Product" class="w-full h-64 object-cover">
+                <div class="p-4 equal-height-content">
+                    <h3 class="font-semibold text-lg mb-2">Night Cream</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★★★★★</span>
+                        </div>
+                        <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(91)</span>
+                    </div>
+                    <p class="text-accent font-bold text-xl mb-4">$54.99</p>
+                    <button onclick="addToCart(8, 'Night Cream', 54.99, 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400')" class="btn-primary w-full">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Limited Time Offer -->
+    <section id="offers" class="section-container bg-gradient-to-r from-accent to-primary">
+        <div class="rounded-2xl p-8 md:p-12 text-center max-w-4xl mx-auto" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4 text-white">Limited Time Offer</h2>
+            <p class="text-lg md:text-xl mb-6 text-white font-medium">Get 30% off on all skincare products. Use code: <span class="font-bold bg-white/20 px-3 py-1 rounded">BEAUTY30</span></p>
+            <a href="skincare.html" class="bg-white text-accent hover:bg-white/90 px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg inline-block">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-container bg-white dark:bg-gray-800">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-subtitle">Real reviews from real customers</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="section-card fade-on-scroll">
+                <div class="flex items-center mb-4">
+                    <div class="flex text-yellow-400">
+                        <span>★★★★★</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">"Amazing products! My skin has never looked better. Highly recommend!"</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-primary rounded-full mr-3"></div>
+                    <div>
+                        <p class="font-semibold">Sarah Johnson</p>
+                        <p class="text-sm text-gray-500">Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-card fade-on-scroll">
+                <div class="flex items-center mb-4">
+                    <div class="flex text-yellow-400">
+                        <span>★★★★★</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">"Fast shipping and excellent quality. Will definitely order again!"</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-primary rounded-full mr-3"></div>
+                    <div>
+                        <p class="font-semibold">Emily Davis</p>
+                        <p class="text-sm text-gray-500">Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-card fade-on-scroll">
+                <div class="flex items-center mb-4">
+                    <div class="flex text-yellow-400">
+                        <span>★★★★☆</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">"Great customer service and beautiful packaging. Love the products!"</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-primary rounded-full mr-3"></div>
+                    <div>
+                        <p class="font-semibold">Jessica Martinez</p>
+                        <p class="text-sm text-gray-500">Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Gallery -->
+    <section class="section-container">
+        <h2 class="section-title">Follow Us on Instagram</h2>
+        <p class="section-subtitle">@beautystore</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="aspect-square overflow-hidden rounded-lg fade-on-scroll">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Instagram" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg fade-on-scroll">
+                <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400" alt="Instagram" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg fade-on-scroll">
+                <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Instagram" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+            </div>
+            <div class="aspect-square overflow-hidden rounded-lg fade-on-scroll">
+                <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400" alt="Instagram" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section-container bg-white dark:bg-gray-800">
+        <div class="glass-strong rounded-2xl p-8 md:p-12 max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">Subscribe to Our Newsletter</h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">Get the latest updates on new products and exclusive offers</p>
+            <form class="flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="Enter your email" class="input-field flex-grow" required>
+                <button type="submit" class="btn-primary whitespace-nowrap">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+                <!-- Column 1: Logo & Description -->
+                <div>
+                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">B</span>
+                        </div>
+                        <span class="font-heading text-xl font-bold">BeautyStore</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Your trusted beauty destination for premium products and expert care.</p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Home</a></li>
+                        <li><a href="shop.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shop</a></li>
+                        <li><a href="about.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Policies -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Policies</h3>
+                    <ul class="space-y-2">
+                        <li><a href="privacy.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Return Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Stay Connected</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Subscribe to get special offers and updates</p>
+                    <form class="flex flex-col gap-2">
+                        <input type="email" placeholder="Your email" class="input-field text-sm" required>
+                        <button type="submit" class="btn-primary text-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-600 dark:text-gray-400 text-sm">&copy; 2025 BeautyStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

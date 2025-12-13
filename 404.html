@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found - Beauty Store</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#F4C2C2',
+              secondary: '#FFF4F4',
+              accent: '#C65B7C',
+              'text-dark': '#2A2A2A',
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="min-h-screen flex items-center justify-center bg-secondary dark:bg-gray-900">
+    <div class="text-center px-4">
+        <div class="glass-strong rounded-2xl p-12 max-w-2xl mx-auto">
+            <h1 class="text-9xl font-heading font-bold text-accent mb-4">404</h1>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4 text-text-dark dark:text-white">Page Not Found</h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-8 text-lg">Sorry, the page you are looking for doesn't exist or has been moved.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html" class="btn-primary inline-block">Go Home</a>
+                <a href="shop.html" class="btn-outline inline-block">Continue Shopping</a>
+            </div>
+        </div>
+
+        <!-- Theme Toggle (Bottom Right) -->
+        <div class="fixed bottom-4 right-4">
+            <button id="theme-toggle" class="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-shadow">
+                <svg class="w-5 h-5 text-text-dark dark:text-gray-100" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="assets/js/theme.js"></script>
+</body>
+</html>
+
