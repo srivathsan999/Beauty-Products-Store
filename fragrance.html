@@ -59,11 +59,6 @@
                     <a href="contact.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Contact</a>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <button class="p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </button>
                     <a href="cart.html" class="relative p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
@@ -75,7 +70,7 @@
                             <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    <a href="login.html" class="hidden md:block px-4 py-2 text-accent hover:text-accent/80 font-medium">Login</a>
+                    <a href="login.html" class="hidden md:block btn-primary">Login</a>
                     <a href="register.html" class="hidden md:block btn-primary">Register</a>
                     <button id="mobile-menu-button" class="md:hidden p-2 text-text-dark dark:text-gray-100">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,7 +90,7 @@
                     <a href="blog.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Blog</a>
                     <a href="about.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">About</a>
                     <a href="contact.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Contact</a>
-                    <a href="login.html" class="px-4 py-2 text-accent">Login</a>
+                    <a href="login.html" class="px-4 py-2 btn-primary text-center">Login</a>
                     <a href="register.html" class="px-4 py-2 btn-primary text-center">Register</a>
                 </div>
             </div>
@@ -146,19 +141,20 @@
         <!-- Products Grid -->
         <div class="mb-8">
             <div class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
-                <p class="text-gray-600 dark:text-gray-400">Showing 1-12 of 16 fragrance products</p>
+                <p class="text-gray-600 dark:text-gray-400">Showing 1-8 of 8 fragrance products</p>
                 <div class="flex items-center gap-4">
                     <label class="text-sm">Sort by:</label>
-                    <select class="input-field w-auto">
-                        <option>Price: Low to High</option>
-                        <option>Price: High to Low</option>
-                        <option>Rating: Highest</option>
-                        <option>Newest</option>
+                    <select id="sort-select" class="input-field w-auto">
+                        <option value="default">Default</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Rating: Highest</option>
+                        <option value="newest">Newest</option>
                     </select>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="product-card equal-height fade-on-scroll">
                     <a href="product.html">
                         <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400" alt="Perfume" class="w-full h-64 object-cover">
@@ -354,6 +350,7 @@
 
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/category-sort.js"></script>
 </body>
 </html>
 

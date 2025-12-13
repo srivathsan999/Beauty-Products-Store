@@ -59,11 +59,6 @@
                     <a href="contact.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Contact</a>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <button class="p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </button>
                     <a href="cart.html" class="relative p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
@@ -75,7 +70,7 @@
                             <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    <a href="login.html" class="hidden md:block px-4 py-2 text-accent hover:text-accent/80 font-medium">Login</a>
+                    <a href="login.html" class="hidden md:block btn-primary">Login</a>
                     <a href="register.html" class="hidden md:block btn-primary">Register</a>
                     <button id="mobile-menu-button" class="md:hidden p-2 text-text-dark dark:text-gray-100">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,7 +86,7 @@
                     <a href="blog.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Blog</a>
                     <a href="about.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">About</a>
                     <a href="contact.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Contact</a>
-                    <a href="login.html" class="px-4 py-2 text-accent">Login</a>
+                    <a href="login.html" class="px-4 py-2 btn-primary text-center">Login</a>
                     <a href="register.html" class="px-4 py-2 btn-primary text-center">Register</a>
                 </div>
             </div>
@@ -185,23 +180,25 @@
             <div class="flex-grow">
                 <!-- Sort Bar -->
                 <div class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
-                    <p class="text-gray-600 dark:text-gray-400">Showing 1-12 of 48 products</p>
+                    <p id="products-showing" class="text-gray-600 dark:text-gray-400">Showing 1-16 of 32 products</p>
                     <div class="flex items-center gap-4">
                         <label class="text-sm">Sort by:</label>
-                        <select class="input-field w-auto">
-                            <option>Price: Low to High</option>
-                            <option>Price: High to Low</option>
-                            <option>Rating: Highest</option>
-                            <option>Newest</option>
+                        <select id="sort-select" class="input-field w-auto">
+                            <option value="default">Default</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Rating: Highest</option>
+                            <option value="newest">Newest</option>
                         </select>
                     </div>
                 </div>
 
                 <!-- Products -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Skincare Products (8) -->
                     <div class="product-card equal-height fade-on-scroll">
                         <a href="product.html">
-                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Product" class="w-full h-64 object-cover">
+                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Face Serum" class="w-full h-64 object-cover">
                         </a>
                         <div class="p-4 equal-height-content">
                             <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Luxury Face Serum</h3></a>
@@ -218,7 +215,7 @@
                     
                     <div class="product-card equal-height fade-on-scroll">
                         <a href="product.html">
-                            <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400" alt="Product" class="w-full h-64 object-cover">
+                            <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400" alt="Vitamin C Cream" class="w-full h-64 object-cover">
                         </a>
                         <div class="p-4 equal-height-content">
                             <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Vitamin C Cream</h3></a>
@@ -235,7 +232,7 @@
                     
                     <div class="product-card equal-height fade-on-scroll">
                         <a href="product.html">
-                            <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Product" class="w-full h-64 object-cover">
+                            <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Face Mask" class="w-full h-64 object-cover">
                         </a>
                         <div class="p-4 equal-height-content">
                             <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Hydrating Face Mask</h3></a>
@@ -252,24 +249,93 @@
                     
                     <div class="product-card equal-height fade-on-scroll">
                         <a href="product.html">
-                            <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400" alt="Product" class="w-full h-64 object-cover">
+                            <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Night Cream" class="w-full h-64 object-cover">
                         </a>
                         <div class="p-4 equal-height-content">
-                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Rose Lip Balm</h3></a>
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Anti-Aging Night Cream</h3></a>
                             <div class="flex items-center mb-2">
                                 <div class="flex text-yellow-400">
                                     <span>★★★★★</span>
                                 </div>
-                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(156)</span>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(91)</span>
                             </div>
-                            <p class="text-accent font-bold text-xl mb-4">$12.99</p>
-                            <button onclick="addToCart(4, 'Rose Lip Balm', 12.99, 'https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400')" class="btn-primary w-full">Add to Cart</button>
+                            <p class="text-accent font-bold text-xl mb-4">$54.99</p>
+                            <button onclick="addToCart(8, 'Anti-Aging Night Cream', 54.99, 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400')" class="btn-primary w-full">Add to Cart</button>
                         </div>
                     </div>
-                    
+
                     <div class="product-card equal-height fade-on-scroll">
                         <a href="product.html">
-                            <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=400" alt="Product" class="w-full h-64 object-cover">
+                            <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400" alt="Cleanser" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Gentle Foaming Cleanser</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★☆</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(76)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$24.99</p>
+                            <button onclick="addToCart(9, 'Gentle Foaming Cleanser', 24.99, 'https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Toner" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Hydrating Toner</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(112)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$28.99</p>
+                            <button onclick="addToCart(10, 'Hydrating Toner', 28.99, 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400" alt="Sunscreen" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">SPF 50 Sunscreen</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(145)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$32.99</p>
+                            <button onclick="addToCart(11, 'SPF 50 Sunscreen', 32.99, 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Eye Cream" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Anti-Puff Eye Cream</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★☆</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(68)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$42.99</p>
+                            <button onclick="addToCart(12, 'Anti-Puff Eye Cream', 42.99, 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Makeup Products (8) -->
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=400" alt="Primer" class="w-full h-64 object-cover">
                         </a>
                         <div class="p-4 equal-height-content">
                             <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Glowing Primer</h3></a>
@@ -286,7 +352,7 @@
                     
                     <div class="product-card equal-height fade-on-scroll">
                         <a href="product.html">
-                            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400" alt="Product" class="w-full h-64 object-cover">
+                            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400" alt="Foundation" class="w-full h-64 object-cover">
                         </a>
                         <div class="p-4 equal-height-content">
                             <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Matte Foundation</h3></a>
@@ -300,15 +366,391 @@
                             <button onclick="addToCart(6, 'Matte Foundation', 45.99, 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400')" class="btn-primary w-full">Add to Cart</button>
                         </div>
                     </div>
+                    
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400" alt="Mascara" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Mascara Pro</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★☆</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(58)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$24.99</p>
+                            <button onclick="addToCart(7, 'Mascara Pro', 24.99, 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400" alt="Lipstick" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Velvet Lipstick</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(124)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$19.99</p>
+                            <button onclick="addToCart(13, 'Velvet Lipstick', 19.99, 'https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400" alt="Blush" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Soft Blush Palette</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★☆</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(89)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$34.99</p>
+                            <button onclick="addToCart(14, 'Soft Blush Palette', 34.99, 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400" alt="Eyeshadow" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Eyeshadow Palette</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(156)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$49.99</p>
+                            <button onclick="addToCart(15, 'Eyeshadow Palette', 49.99, 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400" alt="Concealer" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Full Coverage Concealer</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(98)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$27.99</p>
+                            <button onclick="addToCart(16, 'Full Coverage Concealer', 27.99, 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Highlighter" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Radiant Highlighter</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★☆</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(67)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$22.99</p>
+                            <button onclick="addToCart(17, 'Radiant Highlighter', 22.99, 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Haircare Products (8) -->
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Shampoo" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Hydrating Shampoo</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(134)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$18.99</p>
+                            <button onclick="addToCart(18, 'Hydrating Shampoo', 18.99, 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400" alt="Conditioner" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Repairing Conditioner</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(128)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$20.99</p>
+                            <button onclick="addToCart(19, 'Repairing Conditioner', 20.99, 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Hair Mask" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Deep Conditioning Mask</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★☆</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(92)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$29.99</p>
+                            <button onclick="addToCart(20, 'Deep Conditioning Mask', 29.99, 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400" alt="Hair Oil" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Argan Hair Oil</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(156)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$26.99</p>
+                            <button onclick="addToCart(21, 'Argan Hair Oil', 26.99, 'https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=400" alt="Hair Serum" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Heat Protection Serum</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★☆</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(87)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$24.99</p>
+                            <button onclick="addToCart(22, 'Heat Protection Serum', 24.99, 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400" alt="Dry Shampoo" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Dry Shampoo</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(203)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$16.99</p>
+                            <button onclick="addToCart(23, 'Dry Shampoo', 16.99, 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400" alt="Hair Spray" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Volumizing Hair Spray</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★☆</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(75)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$21.99</p>
+                            <button onclick="addToCart(24, 'Volumizing Hair Spray', 21.99, 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Scalp Treatment" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Scalp Treatment</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(98)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$34.99</p>
+                            <button onclick="addToCart(25, 'Scalp Treatment', 34.99, 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Fragrance Products (8) -->
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400" alt="Perfume" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Rose Elegance Eau de Parfum</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(142)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$89.99</p>
+                            <button onclick="addToCart(26, 'Rose Elegance Eau de Parfum', 89.99, 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400" alt="Perfume" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Vanilla Dreams Perfume</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(118)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$79.99</p>
+                            <button onclick="addToCart(27, 'Vanilla Dreams Perfume', 79.99, 'https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400" alt="Perfume" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Ocean Breeze Fragrance</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★☆</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(96)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$84.99</p>
+                            <button onclick="addToCart(28, 'Ocean Breeze Fragrance', 84.99, 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400" alt="Perfume" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Citrus Fresh Perfume</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(167)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$74.99</p>
+                            <button onclick="addToCart(29, 'Citrus Fresh Perfume', 74.99, 'https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400" alt="Perfume" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Midnight Bloom Perfume</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★☆</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(89)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$94.99</p>
+                            <button onclick="addToCart(30, 'Midnight Bloom Perfume', 94.99, 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400" alt="Perfume" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Jasmine Garden Eau de Toilette</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(134)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$69.99</p>
+                            <button onclick="addToCart(31, 'Jasmine Garden Eau de Toilette', 69.99, 'https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400" alt="Perfume" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Sandalwood Essence</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★☆</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(76)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$99.99</p>
+                            <button onclick="addToCart(32, 'Sandalwood Essence', 99.99, 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card equal-height fade-on-scroll">
+                        <a href="product.html">
+                            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400" alt="Perfume" class="w-full h-64 object-cover">
+                        </a>
+                        <div class="p-4 equal-height-content">
+                            <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Lavender Fields Perfume</h3></a>
+                            <div class="flex items-center mb-2">
+                                <div class="flex text-yellow-400">
+                                    <span>★★★★★</span>
+                                </div>
+                                <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(112)</span>
+                            </div>
+                            <p class="text-accent font-bold text-xl mb-4">$64.99</p>
+                            <button onclick="addToCart(33, 'Lavender Fields Perfume', 64.99, 'https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Pagination -->
-                <div class="flex justify-center items-center gap-2 mt-12">
-                    <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">Previous</button>
-                    <button class="px-4 py-2 rounded-lg bg-accent text-white">1</button>
-                    <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">2</button>
-                    <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">3</button>
-                    <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">Next</button>
+                <div id="pagination-container" class="flex justify-center items-center gap-2 mt-12">
+                    <button id="pagination-prev" class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Previous</button>
+                    <div id="pagination-pages" class="flex gap-2">
+                        <!-- Page number buttons will be generated here -->
+                    </div>
+                    <button id="pagination-next" class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed">Next</button>
                 </div>
             </div>
         </div>
@@ -362,6 +804,7 @@
 
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/shop.js"></script>
 </body>
 </html>
 

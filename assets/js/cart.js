@@ -18,17 +18,32 @@
     if (cartContent) cartContent.classList.remove('hidden');
     
     if (cartContainer) {
-      cartContainer.innerHTML = cart.map((item, index) => `
-        <div class="flex flex-col sm:flex-row gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-soft">
-          <img src="${item.image}" alt="${item.name}" class="w-full sm:w-24 h-24 object-cover rounded-lg">
+      cartContainer.innerHTML = cart.map((item, index) => {
+        // Fix image URL - ensure it's valid and properly formatted
+        let imageSrc = item.image || '';
+        
+        // If image URL exists, use it as-is (Unsplash URLs should work)
+        // If missing or broken, use a placeholder
+        if (!imageSrc || imageSrc.trim() === '') {
+          imageSrc = 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=200&auto=format&fit=crop&q=80';
+        }
+        
+        // Create a fallback placeholder SVG encoded
+        const placeholderSvg = encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#F4C2C2"/><text x="50%" y="50%" font-family="Arial" font-size="16" fill="#9CA3AF" text-anchor="middle" dominant-baseline="middle">Product</text></svg>`);
+        
+        return `
+        <div class="flex flex-col sm:flex-row gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-soft mb-4">
+          <img src="${imageSrc}" alt="${item.name || 'Product'}" class="w-full sm:w-24 h-24 object-cover rounded-lg" 
+               loading="lazy"
+               onerror="this.onerror=null; this.src='data:image/svg+xml;charset=utf-8,${placeholderSvg}'">
           <div class="flex-grow">
-            <h3 class="font-semibold text-lg">${item.name}</h3>
-            <p class="text-accent font-semibold text-lg mt-2">$${item.price.toFixed(2)}</p>
+            <h3 class="font-semibold text-lg">${item.name || 'Product'}</h3>
+            <p class="text-accent font-semibold text-lg mt-2">$${(item.price || 0).toFixed(2)}</p>
           </div>
           <div class="flex items-center gap-4">
             <div class="flex items-center border border-gray-300 dark:border-gray-600 rounded-lg">
               <button onclick="updateQuantity(${index}, -1)" class="px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-700">-</button>
-              <span class="px-4 py-1 border-x border-gray-300 dark:border-gray-600">${item.quantity}</span>
+              <span class="px-4 py-1 border-x border-gray-300 dark:border-gray-600">${item.quantity || 1}</span>
               <button onclick="updateQuantity(${index}, 1)" class="px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-700">+</button>
             </div>
             <button onclick="removeItem(${index})" class="text-red-500 hover:text-red-700">
@@ -38,7 +53,8 @@
             </button>
           </div>
         </div>
-      `).join('');
+      `;
+      }).join('');
     }
     
     updateSummary();

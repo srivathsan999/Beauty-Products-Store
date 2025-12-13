@@ -59,11 +59,6 @@
                     <a href="contact.html" class="text-accent font-medium">Contact</a>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <button class="p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </button>
                     <a href="cart.html" class="relative p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
@@ -75,7 +70,7 @@
                             <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    <a href="login.html" class="hidden md:block px-4 py-2 text-accent hover:text-accent/80 font-medium">Login</a>
+                    <a href="login.html" class="hidden md:block btn-primary">Login</a>
                     <a href="register.html" class="hidden md:block btn-primary">Register</a>
                     <button id="mobile-menu-button" class="md:hidden p-2 text-text-dark dark:text-gray-100">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,7 +86,7 @@
                     <a href="blog.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Blog</a>
                     <a href="about.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">About</a>
                     <a href="contact.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Contact</a>
-                    <a href="login.html" class="px-4 py-2 text-accent">Login</a>
+                    <a href="login.html" class="px-4 py-2 btn-primary text-center">Login</a>
                     <a href="register.html" class="px-4 py-2 btn-primary text-center">Register</a>
                 </div>
             </div>
@@ -104,26 +99,45 @@
         
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <!-- Contact Form -->
-            <div class="glass-strong rounded-2xl p-8 fade-on-scroll">
+            <div class="glass-strong rounded-2xl p-8 fade-on-scroll flex flex-col">
                 <h2 class="text-2xl font-heading font-bold mb-6">Send us a Message</h2>
-                <form class="space-y-4">
-                    <div>
-                        <label class="block font-semibold mb-2">Name *</label>
-                        <input type="text" class="input-field" required>
+                <form class="flex flex-col flex-1">
+                    <div class="flex flex-col space-y-4">
+                        <div>
+                            <label class="block font-semibold mb-2">Name *</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Email *</label>
+                            <input type="email" class="input-field" required>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Phone Number *</label>
+                            <input type="tel" class="input-field" required>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Subject *</label>
+                            <input type="text" class="input-field" required>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">How did you hear about us? *</label>
+                            <select class="input-field" required>
+                                <option value="">Select an option</option>
+                                <option value="search">Search Engine</option>
+                                <option value="social">Social Media</option>
+                                <option value="friend">Friend/Referral</option>
+                                <option value="advertisement">Advertisement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block font-semibold mb-2">Message *</label>
+                            <textarea rows="5" class="input-field" required></textarea>
+                        </div>
                     </div>
-                    <div>
-                        <label class="block font-semibold mb-2">Email *</label>
-                        <input type="email" class="input-field" required>
+                    <div class="mt-auto pt-6">
+                        <button type="submit" class="btn-primary w-full">Send Message</button>
                     </div>
-                    <div>
-                        <label class="block font-semibold mb-2">Subject *</label>
-                        <input type="text" class="input-field" required>
-                    </div>
-                    <div>
-                        <label class="block font-semibold mb-2">Message *</label>
-                        <textarea rows="5" class="input-field" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary w-full">Send Message</button>
                 </form>
             </div>
 
@@ -193,9 +207,18 @@
                     </div>
                 </div>
 
-                <!-- Map Placeholder -->
-                <div class="glass-strong rounded-2xl p-8 h-64 flex items-center justify-center">
-                    <p class="text-gray-600 dark:text-gray-400">Map Integration Placeholder</p>
+                <!-- Map -->
+                <div class="glass-strong rounded-2xl overflow-hidden h-96">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184132884563!2d-73.99671258459418!3d40.75889597932684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sNew%20York%2C%20NY%2010001%2C%20USA!5e0!3m2!1sen!2s!4v1705089600000!5m2!1sen!2s" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="w-full h-full rounded-2xl">
+                    </iframe>
                 </div>
             </div>
         </div>
