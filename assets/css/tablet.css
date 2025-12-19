@@ -305,6 +305,25 @@
     display: none !important;
   }
   
+  /* Reduce button sizes in mobile menu horizontally to 80% of original (20% reduction) */
+  nav #mobile-menu .btn-primary {
+    width: 80% !important;
+    max-width: 120px; /* Limit maximum width */
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 0.875rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  /* Center the container for Login and Register buttons */
+  nav #mobile-menu > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
   /* ============================================
      ADDITIONAL FIXES
      ============================================ */
@@ -331,6 +350,156 @@
     padding: 2rem;
     margin: 1.5rem auto;
     max-width: calc(100% - 3rem);
+  }
+  
+  /* ============================================
+     BLOG PAGE - Featured Post Card
+     ============================================ */
+  /* Keep image at normal size and add small spacing between image and heading */
+  /* Ensure image container maintains normal aspect ratio */
+  .product-card .grid.grid-cols-1.lg\:grid-cols-2 > div.aspect-video,
+  .product-card .grid > div.aspect-video.lg\:aspect-auto {
+    /* Keep default aspect-ratio, don't restrict height */
+    overflow: hidden;
+  }
+  
+  /* Ensure image displays at full size */
+  .product-card .grid.grid-cols-1.lg\:grid-cols-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Add small padding-top to content div for spacing */
+  .product-card .grid.grid-cols-1.lg\:grid-cols-2 > div:nth-child(2),
+  .product-card .grid.grid-cols-1.lg\:grid-cols-2 > div.p-8.lg\:p-12 {
+    padding-top: 1rem !important; /* Small spacing: 1rem (16px) */
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    padding-bottom: 2rem !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Remove gaps from grid */
+  .product-card .grid.grid-cols-1.lg\:grid-cols-2 {
+    gap: 0 !important;
+    row-gap: 0 !important;
+  }
+  
+  /* Remove margin from the "FEATURED ARTICLE" span */
+  .product-card .grid > div.flex.flex-col.justify-center > span.text-accent {
+    margin-top: 0 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* ============================================
+     BLOG DETAILS PAGE
+     ============================================ */
+  /* Featured image responsive */
+  #blog-image {
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  /* Blog title responsive */
+  #blog-title {
+    font-size: 2.5rem !important;
+    line-height: 1.2;
+  }
+  
+  /* Blog content spacing */
+  .blog-content {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .blog-content h2 {
+    font-size: 1.75rem !important;
+    margin-top: 1.5rem !important;
+  }
+  
+  .blog-content p {
+    font-size: 1rem !important;
+  }
+  
+  /* Author section */
+  .flex.flex-wrap.items-center.gap-6 {
+    gap: 1rem;
+  }
+  
+  /* Share section */
+  .mt-12.pt-8 {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+  
+  /* Related posts grid */
+  #related-posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* ============================================
+     SHOP PAGE - Filter Menu
+     ============================================ */
+  /* Filter button styling - reduce horizontally by 70% (to 30% of original) */
+  #filter-toggle-button {
+    width: 30% !important;
+    max-width: 150px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  /* Filter menu drawer */
+  #filter-menu {
+    z-index: 9999;
+  }
+  
+  #filter-menu > div {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ============================================
+   MOBILE VIEW - Button sizes and centering
+   ============================================ */
+@media (max-width: 767px) {
+  /* Reduce button sizes in mobile menu horizontally to 80% of original (20% reduction) */
+  nav #mobile-menu .btn-primary {
+    width: 80% !important;
+    max-width: 120px; /* Limit maximum width */
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 0.875rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  /* Center the container for Login and Register buttons */
+  nav #mobile-menu > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* ============================================
+     SHOP PAGE - Filter Menu (Mobile)
+     ============================================ */
+  /* Filter button styling - reduce horizontally by 70% (to 30% of original) */
+  #filter-toggle-button {
+    width: 30% !important;
+    max-width: 150px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  /* Filter menu drawer - full width on mobile */
+  #filter-menu > div {
+    width: 100%;
+    max-width: 100%;
   }
 }
 

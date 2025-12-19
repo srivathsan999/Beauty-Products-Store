@@ -134,3 +134,39 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 })();
 
+// Filter menu animation
+(function() {
+  'use strict';
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterMenu = document.getElementById('filter-menu');
+    const filterMenuContent = filterMenu ? filterMenu.querySelector('div > div') : null;
+    
+    if (filterMenu && filterMenuContent) {
+      const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+            if (filterMenu.classList.contains('hidden')) {
+              filterMenuContent.style.transform = 'translateX(100%)';
+            } else {
+              setTimeout(function() {
+                filterMenuContent.style.transform = 'translateX(0)';
+              }, 10);
+            }
+          }
+        });
+      });
+      
+      observer.observe(filterMenu, {
+        attributes: true,
+        attributeFilter: ['class']
+      });
+      
+      // Initialize
+      if (filterMenu.classList.contains('hidden')) {
+        filterMenuContent.style.transform = 'translateX(100%)';
+      }
+    }
+  });
+})();
+
