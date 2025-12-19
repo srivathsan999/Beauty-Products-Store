@@ -333,3 +333,14 @@ body {
   color: #A0475F;
 }
 
+/* Blog card paragraph alignment - desktop view only */
+/* Align paragraphs in MAKEUP and HAIRCARE cards with first card's paragraph */
+/* The first card heading "How to Build the Perfect Skincare Routine" wraps to 2 lines,
+   while "Makeup Trends for 2025" and "Natural Hair Care Remedies" are shorter (1 line).
+   Adding margin-top to compensate for the height difference (approx one line height). */
+@media (min-width: 1024px) {
+  .blog-card-paragraph-spacing {
+    margin-top: 1.5rem; /* Height difference for one line of heading text (text-xl with line-height 1.5) */
+  }
+}
+
