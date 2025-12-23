@@ -21,6 +21,41 @@
   });
 })();
 
+// Mobile menu dropdown toggles (Categories and Dashboard)
+(function() {
+  'use strict';
+  
+  // Categories dropdown toggle
+  const categoriesToggle = document.getElementById('mobile-categories-toggle');
+  const categoriesMenu = document.getElementById('mobile-categories-menu');
+  const categoriesIcon = categoriesToggle ? categoriesToggle.querySelector('svg') : null;
+  
+  if (categoriesToggle && categoriesMenu) {
+    categoriesToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      categoriesMenu.classList.toggle('hidden');
+      if (categoriesIcon) {
+        categoriesIcon.classList.toggle('rotate-180');
+      }
+    });
+  }
+  
+  // Dashboard dropdown toggle
+  const dashboardToggle = document.getElementById('mobile-dashboard-toggle');
+  const dashboardMenu = document.getElementById('mobile-dashboard-menu');
+  const dashboardIcon = dashboardToggle ? dashboardToggle.querySelector('svg') : null;
+  
+  if (dashboardToggle && dashboardMenu) {
+    dashboardToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      dashboardMenu.classList.toggle('hidden');
+      if (dashboardIcon) {
+        dashboardIcon.classList.toggle('rotate-180');
+      }
+    });
+  }
+})();
+
 // Cart functionality
 (function() {
   'use strict';

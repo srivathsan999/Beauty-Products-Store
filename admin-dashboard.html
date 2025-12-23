@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Details - Beauty Store</title>
+    <title>Admin Dashboard - Beauty Store</title>
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,15 +30,20 @@
     <nav class="sticky top-0 z-50 glass-strong border-b border-white/20 dark:border-gray-700/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
                 <a href="index.html" class="flex items-center space-x-2">
                     <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
                         <span class="text-white font-bold text-xl">B</span>
                     </div>
                     <span class="font-heading text-xl font-bold text-text-dark dark:text-white">BeautyStore</span>
                 </a>
+
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Home</a>
                     <a href="shop.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Shop</a>
+                    
+                    <!-- Categories Dropdown -->
                     <div class="relative group">
                         <button class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center">
                             Categories
@@ -55,7 +60,8 @@
                             </div>
                         </div>
                     </div>
-                    <a href="blog.html" class="text-accent font-medium">Blog</a>
+                    
+                    <a href="blog.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Blog</a>
                     <a href="about.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">About</a>
                     <a href="contact.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Contact</a>
                     
@@ -75,20 +81,29 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Right Side Icons -->
                 <div class="flex items-center space-x-4">
+                    <!-- Cart -->
                     <a href="cart.html" class="relative p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         </svg>
                         <span class="cart-count absolute top-0 right-0 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
                     </a>
+
+                    <!-- Theme Toggle -->
                     <button id="theme-toggle" class="p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
                         </svg>
                     </button>
+
+                    <!-- Login -->
                     <a href="login.html" class="hidden md:block btn-primary">Login</a>
                     <a href="register.html" class="hidden md:block btn-primary">Register</a>
+
+                    <!-- Mobile Menu Button -->
                     <button id="mobile-menu-button" class="md:hidden p-2 text-text-dark dark:text-gray-100">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -96,6 +111,8 @@
                     </button>
                 </div>
             </div>
+
+            <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-2">
                     <a href="index.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home</a>
@@ -114,7 +131,7 @@
                             <a href="fragrance.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Fragrance</a>
                         </div>
                     </div>
-                    <a href="blog.html" class="px-4 py-2 text-accent font-semibold">Blog</a>
+                    <a href="blog.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Blog</a>
                     <a href="about.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">About</a>
                     <a href="contact.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Contact</a>
                     <div class="px-4 py-2">
@@ -136,78 +153,209 @@
         </div>
     </nav>
 
-    <!-- Blog Details Page -->
-    <section class="section-container">
-        <!-- Back Button -->
-        <div class="mb-6 fade-on-scroll">
-            <a href="blog.html" class="inline-flex items-center text-accent hover:text-accent/80 transition-colors">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-                Back to Blog
-            </a>
-        </div>
-
-        <!-- Blog Post Content -->
-        <article class="fade-on-scroll">
-            <!-- Featured Image -->
-            <div class="mb-8">
-                <img id="blog-image" src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800" alt="Blog Post" class="w-full h-96 object-cover rounded-2xl">
+    <!-- Dashboard Content -->
+    <section class="section-container py-12">
+        <div class="max-w-7xl mx-auto">
+            <!-- Page Header -->
+            <div class="mb-8 fade-on-scroll text-center">
+                <h1 class="section-title mb-4">Admin Dashboard</h1>
+                <p class="text-gray-600 dark:text-gray-400">Manage your store, products, orders, and customers.</p>
             </div>
 
-            <!-- Blog Header -->
-            <div class="mb-8">
-                <span id="blog-category" class="text-accent font-semibold text-sm mb-4 block"></span>
-                <h1 id="blog-title" class="text-4xl md:text-5xl font-heading font-bold mb-6"></h1>
-                
-                <!-- Author and Date -->
-                <div class="flex flex-wrap items-center gap-6 mb-6">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-primary rounded-full"></div>
+            <!-- Dashboard Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="section-card fade-on-scroll">
+                    <div class="flex items-center justify-between">
                         <div>
-                            <p id="blog-author" class="font-semibold"></p>
-                            <p id="blog-author-role" class="text-sm text-gray-500"></p>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-1">Total Sales</p>
+                            <p class="text-3xl font-bold text-text-dark dark:text-white">$45,230</p>
+                            <p class="text-green-600 dark:text-green-400 text-sm mt-1">+12.5% from last month</p>
+                        </div>
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
                         </div>
                     </div>
-                    <span id="blog-date" class="text-gray-500"></span>
                 </div>
-            </div>
 
-            <!-- Blog Content -->
-            <div id="blog-content" class="blog-content">
-                <!-- Content will be dynamically inserted here -->
-            </div>
+                <div class="section-card fade-on-scroll">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-1">Total Orders</p>
+                            <p class="text-3xl font-bold text-text-dark dark:text-white">1,248</p>
+                            <p class="text-green-600 dark:text-green-400 text-sm mt-1">+8.2% from last month</p>
+                        </div>
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Share Section -->
-            <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
-                <div class="flex flex-wrap items-center gap-4">
-                    <span class="font-semibold">Share this article:</span>
-                    <div class="flex gap-3">
-                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                <div class="section-card fade-on-scroll">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-1">Total Customers</p>
+                            <p class="text-3xl font-bold text-text-dark dark:text-white">3,567</p>
+                            <p class="text-green-600 dark:text-green-400 text-sm mt-1">+15.3% from last month</p>
+                        </div>
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
                             </svg>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-card fade-on-scroll">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-1">Total Products</p>
+                            <p class="text-3xl font-bold text-text-dark dark:text-white">156</p>
+                            <p class="text-green-600 dark:text-green-400 text-sm mt-1">+5 new this month</p>
+                        </div>
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
                             </svg>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </article>
 
-        <!-- Related Posts -->
-        <div class="mt-16 fade-on-scroll">
-            <h2 class="text-3xl font-heading font-bold mb-8">Related Articles</h2>
-            <!-- Related posts will be dynamically inserted here -->
-            <div id="related-posts" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            <!-- Main Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Main Content -->
+                <div class="lg:col-span-2 space-y-6">
+                    <!-- Recent Orders -->
+                    <div class="section-card fade-on-scroll">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-2xl font-heading font-bold">Recent Orders</h2>
+                            <a href="#" class="text-accent hover:text-accent/80 font-semibold text-sm">View All →</a>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                                        <th class="text-left py-3 px-4 font-semibold">Order ID</th>
+                                        <th class="text-left py-3 px-4 font-semibold">Customer</th>
+                                        <th class="text-left py-3 px-4 font-semibold">Amount</th>
+                                        <th class="text-left py-3 px-4 font-semibold">Status</th>
+                                        <th class="text-left py-3 px-4 font-semibold">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                                        <td class="py-3 px-4">#12345</td>
+                                        <td class="py-3 px-4">John Doe</td>
+                                        <td class="py-3 px-4 font-semibold">$49.98</td>
+                                        <td class="py-3 px-4"><span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded text-xs">Pending</span></td>
+                                        <td class="py-3 px-4 text-sm text-gray-600 dark:text-gray-400">Jan 15, 2025</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                                        <td class="py-3 px-4">#12344</td>
+                                        <td class="py-3 px-4">Jane Smith</td>
+                                        <td class="py-3 px-4 font-semibold">$29.99</td>
+                                        <td class="py-3 px-4"><span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded text-xs">Delivered</span></td>
+                                        <td class="py-3 px-4 text-sm text-gray-600 dark:text-gray-400">Jan 12, 2025</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                                        <td class="py-3 px-4">#12343</td>
+                                        <td class="py-3 px-4">Mike Johnson</td>
+                                        <td class="py-3 px-4 font-semibold">$89.97</td>
+                                        <td class="py-3 px-4"><span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">Shipped</span></td>
+                                        <td class="py-3 px-4 text-sm text-gray-600 dark:text-gray-400">Jan 10, 2025</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                                        <td class="py-3 px-4">#12342</td>
+                                        <td class="py-3 px-4">Sarah Williams</td>
+                                        <td class="py-3 px-4 font-semibold">$34.99</td>
+                                        <td class="py-3 px-4"><span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded text-xs">Delivered</span></td>
+                                        <td class="py-3 px-4 text-sm text-gray-600 dark:text-gray-400">Jan 8, 2025</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Top Products -->
+                    <div class="section-card fade-on-scroll">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-2xl font-heading font-bold">Top Products</h2>
+                            <a href="#" class="text-accent hover:text-accent/80 font-semibold text-sm">View All →</a>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=100" alt="Product" class="w-16 h-16 object-cover rounded-lg">
+                                    <div>
+                                        <p class="font-semibold">Moisturizing Cream</p>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">156 sales</p>
+                                    </div>
+                                </div>
+                                <p class="font-bold text-accent">$49.98</p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=100" alt="Product" class="w-16 h-16 object-cover rounded-lg">
+                                    <div>
+                                        <p class="font-semibold">Glowing Primer</p>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">142 sales</p>
+                                    </div>
+                                </div>
+                                <p class="font-bold text-accent">$29.99</p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=100" alt="Product" class="w-16 h-16 object-cover rounded-lg">
+                                    <div>
+                                        <p class="font-semibold">Hair Serum</p>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">128 sales</p>
+                                    </div>
+                                </div>
+                                <p class="font-bold text-accent">$34.99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="space-y-6">
+                    <!-- Quick Actions -->
+                    <div class="section-card fade-on-scroll">
+                        <h2 class="text-2xl font-heading font-bold mb-6">Quick Actions</h2>
+                        <div class="space-y-3">
+                            <button class="w-full btn-primary text-left px-4 py-3">Add New Product</button>
+                            <button class="w-full btn-outline text-left px-4 py-3">Manage Orders</button>
+                            <button class="w-full btn-outline text-left px-4 py-3">View Customers</button>
+                            <button class="w-full btn-outline text-left px-4 py-3">Manage Inventory</button>
+                            <button class="w-full btn-outline text-left px-4 py-3">View Analytics</button>
+                            <button class="w-full btn-outline text-left px-4 py-3">Settings</button>
+                        </div>
+                    </div>
+
+                    <!-- Pending Actions -->
+                    <div class="section-card fade-on-scroll">
+                        <h2 class="text-2xl font-heading font-bold mb-6">Pending Actions</h2>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-yellow-500 pl-4">
+                                <p class="font-semibold text-sm">3 orders need review</p>
+                                <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Click to review</p>
+                            </div>
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <p class="font-semibold text-sm">5 products low in stock</p>
+                                <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Click to restock</p>
+                            </div>
+                            <div class="border-l-4 border-red-500 pl-4">
+                                <p class="font-semibold text-sm">2 customer inquiries</p>
+                                <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Click to respond</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -251,6 +399,7 @@
                     </form>
                 </div>
             </div>
+
             <div class="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center">
                 <p class="text-gray-600 dark:text-gray-400 text-sm">&copy; 2025 BeautyStore. All rights reserved.</p>
             </div>
@@ -259,7 +408,6 @@
 
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/blog-details.js"></script>
 </body>
 </html>
 
