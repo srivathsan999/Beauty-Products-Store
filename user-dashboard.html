@@ -26,132 +26,28 @@
     <link rel="stylesheet" href="assets/css/tablet.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-50 glass-strong border-b border-white/20 dark:border-gray-700/20">
+    <!-- Header with Logo and Logout -->
+    <header class="sticky top-0 z-50 glass-strong border-b border-white/20 dark:border-gray-700/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <!-- Logo -->
+                <!-- Logo and Company Name -->
                 <a href="index.html" class="flex items-center space-x-2">
                     <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
                         <span class="text-white font-bold text-xl">B</span>
                     </div>
                     <span class="font-heading text-xl font-bold text-text-dark dark:text-white">BeautyStore</span>
                 </a>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Home</a>
-                    <a href="shop.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Shop</a>
-                    
-                    <!-- Categories Dropdown -->
-                    <div class="relative group">
-                        <button class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center">
-                            Categories
-                            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <div class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                            <div class="py-2">
-                                <a href="skincare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Skincare</a>
-                                <a href="makeup.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Makeup</a>
-                                <a href="haircare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Haircare</a>
-                                <a href="fragrance.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Fragrance</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="blog.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Blog</a>
-                    <a href="about.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">About</a>
-                    <a href="contact.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Contact</a>
-                    
-                    <!-- Dashboard Dropdown -->
-                    <div class="relative group">
-                        <button class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center">
-                            Dashboard
-                            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <div class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                            <div class="py-2">
-                                <a href="user-dashboard.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">User Dashboard</a>
-                                <a href="admin-dashboard.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Admin Dashboard</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Side Icons -->
-                <div class="flex items-center space-x-4">
-                    <!-- Cart -->
-                    <a href="cart.html" class="relative p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                        <span class="cart-count absolute top-0 right-0 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
-                    </a>
-
-                    <!-- Theme Toggle -->
-                    <button id="theme-toggle" class="p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-
-                    <!-- Login -->
-                    <a href="login.html" class="hidden md:block btn-primary">Login</a>
-                    <a href="register.html" class="hidden md:block btn-primary">Register</a>
-
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="md:hidden p-2 text-text-dark dark:text-gray-100">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <div class="flex flex-col space-y-2">
-                    <a href="index.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home</a>
-                    <a href="shop.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Shop</a>
-                    <div class="px-4 py-2">
-                        <button id="mobile-categories-toggle" class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
-                            <span>Categories</span>
-                            <svg class="w-4 h-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <div id="mobile-categories-menu" class="hidden pl-4 mt-2 space-y-2">
-                            <a href="skincare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Skincare</a>
-                            <a href="makeup.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Makeup</a>
-                            <a href="haircare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Haircare</a>
-                            <a href="fragrance.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Fragrance</a>
-                        </div>
-                    </div>
-                    <a href="blog.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Blog</a>
-                    <a href="about.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">About</a>
-                    <a href="contact.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Contact</a>
-                    <div class="px-4 py-2">
-                        <button id="mobile-dashboard-toggle" class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
-                            <span>Dashboard</span>
-                            <svg class="w-4 h-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <div id="mobile-dashboard-menu" class="hidden pl-4 mt-2 space-y-2">
-                            <a href="user-dashboard.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">User Dashboard</a>
-                            <a href="admin-dashboard.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Admin Dashboard</a>
-                        </div>
-                    </div>
-                    <a href="login.html" class="px-4 py-2 btn-primary text-center">Login</a>
-                    <a href="register.html" class="px-4 py-2 btn-primary text-center">Register</a>
-                </div>
+                
+                <!-- Logout Button -->
+                <a href="index.html" id="logout-button" class="btn-primary flex items-center space-x-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+                    </svg>
+                    <span>Logout</span>
+                </a>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Dashboard Content -->
     <section class="section-container py-12">
@@ -275,7 +171,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="block text-center mt-6 text-accent hover:text-accent/80 font-semibold">View All Orders →</a>
+                        <a href="#" id="view-all-orders" class="block text-center mt-6 text-accent hover:text-accent/80 font-semibold">View All Orders →</a>
                     </div>
 
                     <!-- Wishlist -->
@@ -287,7 +183,7 @@
                                 <div class="flex-grow">
                                     <p class="font-semibold">Rose Lip Balm</p>
                                     <p class="text-accent font-bold">$12.99</p>
-                                    <button class="text-sm text-accent hover:text-accent/80 mt-2">Add to Cart</button>
+                                    <button class="text-sm text-accent hover:text-accent/80 mt-2 add-to-cart-btn" data-product="Rose Lip Balm" data-price="12.99" data-image="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=100">Add to Cart</button>
                                 </div>
                             </div>
                             <div class="flex items-center space-x-4">
@@ -295,7 +191,7 @@
                                 <div class="flex-grow">
                                     <p class="font-semibold">Matte Foundation</p>
                                     <p class="text-accent font-bold">$45.99</p>
-                                    <button class="text-sm text-accent hover:text-accent/80 mt-2">Add to Cart</button>
+                                    <button class="text-sm text-accent hover:text-accent/80 mt-2 add-to-cart-btn" data-product="Matte Foundation" data-price="45.99" data-image="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=100">Add to Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -320,7 +216,7 @@
                                 <label class="block text-sm font-semibold mb-2">Phone</label>
                                 <p class="text-gray-600 dark:text-gray-400">+1 (555) 123-4567</p>
                             </div>
-                            <button class="btn-primary w-full mt-4">Edit Profile</button>
+                            <button id="edit-profile-btn" class="btn-primary w-full mt-4">Edit Profile</button>
                         </div>
                     </div>
 
@@ -329,8 +225,8 @@
                         <h2 class="text-2xl font-heading font-bold mb-6">Quick Actions</h2>
                         <div class="space-y-3">
                             <a href="shop.html" class="block w-full btn-outline text-center">Continue Shopping</a>
-                            <a href="#" class="block w-full btn-outline text-center">Shipping Addresses</a>
-                            <a href="#" class="block w-full btn-outline text-center">Payment Methods</a>
+                            <a href="#" id="shipping-addresses" class="block w-full btn-outline text-center">Shipping Addresses</a>
+                            <a href="#" id="payment-methods" class="block w-full btn-outline text-center">Payment Methods</a>
                             <a href="contact.html" class="block w-full btn-outline text-center">Contact Support</a>
                         </div>
                     </div>
@@ -339,55 +235,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
-                <div>
-                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                            <span class="text-white font-bold text-xl">B</span>
-                        </div>
-                        <span class="font-heading text-xl font-bold">BeautyStore</span>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">Your trusted beauty destination for premium products and expert care.</p>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Home</a></li>
-                        <li><a href="shop.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shop</a></li>
-                        <li><a href="about.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
-                        <li><a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-lg mb-4">Policies</h3>
-                    <ul class="space-y-2">
-                        <li><a href="privacy.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Terms of Service</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shipping Policy</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Return Policy</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-lg mb-4">Stay Connected</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Subscribe to get special offers and updates</p>
-                    <form class="flex flex-col gap-2">
-                        <input type="email" placeholder="Your email" class="input-field text-sm" required>
-                        <button type="submit" class="btn-primary text-sm">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-600 dark:text-gray-400 text-sm">&copy; 2025 BeautyStore. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/user-dashboard.js"></script>
 </body>
 </html>
 
