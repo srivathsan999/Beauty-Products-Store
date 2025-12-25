@@ -37,7 +37,22 @@
                     <span class="font-heading text-xl font-bold text-text-dark dark:text-white">BeautyStore</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Home</a>
+                    <!-- Home Dropdown -->
+                    <div class="relative group">
+                        <button class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center" aria-expanded="false" aria-haspopup="true">
+                            Home
+                            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300" role="menu">
+                            <div class="py-2">
+                                <a href="index.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700" role="menuitem">Home</a>
+                                <a href="home2.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700" role="menuitem">Home 2</a>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <a href="shop.html" class="text-accent font-medium">Shop</a>
                     <div class="relative group">
                         <button class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center">
@@ -98,7 +113,18 @@
             </div>
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-2">
-                    <a href="index.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home</a>
+                    <div class="px-4 py-2">
+                        <button id="mobile-home-toggle" class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
+                            <span>Home</span>
+                            <svg class="w-4 h-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div id="mobile-home-menu" class="hidden pl-4 mt-2 space-y-2">
+                            <a href="index.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home</a>
+                            <a href="home2.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home 2</a>
+                        </div>
+                    </div>
                     <a href="shop.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Shop</a>
                     <div class="px-4 py-2">
                         <button id="mobile-categories-toggle" class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">

@@ -21,9 +21,24 @@
   });
 })();
 
-// Mobile menu dropdown toggles (Categories and Dashboard)
+// Mobile menu dropdown toggles (Home, Categories, and Dashboard)
 (function() {
   'use strict';
+  
+  // Home dropdown toggle
+  const homeToggle = document.getElementById('mobile-home-toggle');
+  const homeMenu = document.getElementById('mobile-home-menu');
+  const homeIcon = homeToggle ? homeToggle.querySelector('svg') : null;
+  
+  if (homeToggle && homeMenu) {
+    homeToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      homeMenu.classList.toggle('hidden');
+      if (homeIcon) {
+        homeIcon.classList.toggle('rotate-180');
+      }
+    });
+  }
   
   // Categories dropdown toggle
   const categoriesToggle = document.getElementById('mobile-categories-toggle');

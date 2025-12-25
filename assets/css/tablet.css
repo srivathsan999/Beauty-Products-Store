@@ -460,6 +460,95 @@
     width: 100%;
     max-width: 320px;
   }
+  
+  /* ============================================
+     ADMIN DASHBOARD - Stats Cards Fix
+     ============================================ */
+  /* Fix stats cards grid on tablet - 2 columns instead of 4 (only for admin dashboard) */
+  section.section-container .grid.grid-cols-1.md\:grid-cols-4.mb-8,
+  .grid.grid-cols-1.md\:grid-cols-4.mb-8 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem;
+  }
+  
+  /* Increase padding in admin dashboard stats cards for better spacing */
+  section.section-container .grid.grid-cols-1.md\:grid-cols-4 .section-card {
+    padding: 1.5rem !important;
+    overflow: hidden; /* Prevent content from overflowing */
+    min-height: auto;
+  }
+  
+  /* Ensure stats cards don't overflow */
+  section.section-container .grid.grid-cols-1.md\:grid-cols-4 .section-card > div {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  /* Fix number overflow - reduce font size on tablet for stats cards */
+  section.section-container .grid.grid-cols-1.md\:grid-cols-4 .section-card .text-3xl {
+    font-size: 1.75rem !important; /* Reduced from 1.875rem (text-3xl) */
+    line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Make flex container more flexible in stats cards */
+  section.section-container .grid.grid-cols-1.md\:grid-cols-4 .section-card .flex.items-center.justify-between {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  
+  /* Ensure text content has proper spacing and doesn't overflow */
+  section.section-container .grid.grid-cols-1.md\:grid-cols-4 .section-card .flex.items-center.justify-between > div:first-child {
+    flex: 1 1 auto;
+    min-width: 0; /* Allow flex item to shrink */
+    padding-right: 0.5rem;
+    max-width: calc(100% - 2.75rem); /* Reserve space for icon */
+    overflow: hidden;
+  }
+  
+  /* Icon container - make it smaller on tablet */
+  section.section-container .grid.grid-cols-1.md\:grid-cols-4 .section-card .w-12.h-12 {
+    width: 2.5rem !important; /* 40px instead of 48px */
+    height: 2.5rem !important;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+  
+  /* Ensure percentage text doesn't overflow in stats cards */
+  section.section-container .grid.grid-cols-1.md\:grid-cols-4 .section-card .text-sm {
+    font-size: 0.8125rem !important; /* Slightly smaller */
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+  
+  /* Add more spacing between elements in stats cards */
+  section.section-container .grid.grid-cols-1.md\:grid-cols-4 .section-card p {
+    margin-bottom: 0.5rem;
+  }
+  
+  section.section-container .grid.grid-cols-1.md\:grid-cols-4 .section-card .text-sm.mb-1 {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  section.section-container .grid.grid-cols-1.md\:grid-cols-4 .section-card .text-sm.mt-1 {
+    margin-top: 0.5rem !important;
+  }
+  
+  /* Ensure labels don't overflow in stats cards */
+  section.section-container .grid.grid-cols-1.md\:grid-cols-4 .section-card .text-gray-600.dark\:text-gray-400.text-sm {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 
 /* ============================================
