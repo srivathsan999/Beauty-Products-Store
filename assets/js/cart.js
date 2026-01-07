@@ -29,28 +29,38 @@
         }
         
         // Create a fallback placeholder SVG encoded
-        const placeholderSvg = encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#F4C2C2"/><text x="50%" y="50%" font-family="Arial" font-size="16" fill="#9CA3AF" text-anchor="middle" dominant-baseline="middle">Product</text></svg>`);
+        const placeholderSvg = encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#D4A5A5"/><text x="50%" y="50%" font-family="Arial" font-size="16" fill="#9CA3AF" text-anchor="middle" dominant-baseline="middle">Product</text></svg>`);
+        
+        const itemTotal = ((item.price || 0) * (item.quantity || 1)).toFixed(2);
         
         return `
-        <div class="flex flex-col sm:flex-row gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-soft mb-4">
-          <img src="${imageSrc}" alt="${item.name || 'Product'}" class="w-full sm:w-24 h-24 object-cover rounded-lg" 
-               loading="lazy"
-               onerror="this.onerror=null; this.src='data:image/svg+xml;charset=utf-8,${placeholderSvg}'">
-          <div class="flex-grow">
-            <h3 class="font-semibold text-lg">${item.name || 'Product'}</h3>
-            <p class="text-accent font-semibold text-lg mt-2">$${(item.price || 0).toFixed(2)}</p>
+        <div class="flex flex-col sm:flex-row gap-4 p-4 md:p-5 bg-white dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all duration-300">
+          <div class="flex-shrink-0">
+            <img src="${imageSrc}" alt="${item.name || 'Product'}" class="w-full sm:w-28 h-28 md:w-32 md:h-32 object-cover rounded-lg shadow-sm" 
+                 loading="lazy"
+                 onerror="this.onerror=null; this.src='data:image/svg+xml;charset=utf-8,${placeholderSvg}'">
           </div>
-          <div class="flex items-center gap-4">
-            <div class="flex items-center border border-gray-300 dark:border-gray-600 rounded-lg">
-              <button onclick="updateQuantity(${index}, -1)" class="px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-700">-</button>
-              <span class="px-4 py-1 border-x border-gray-300 dark:border-gray-600">${item.quantity || 1}</span>
-              <button onclick="updateQuantity(${index}, 1)" class="px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-700">+</button>
+          <div class="flex-grow flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div class="flex-grow">
+              <h3 class="font-semibold text-lg md:text-xl text-text-dark dark:text-white mb-2">${item.name || 'Product'}</h3>
+              <p class="text-accent font-bold text-lg md:text-xl">$${(item.price || 0).toFixed(2)} <span class="text-gray-500 dark:text-gray-400 text-sm font-normal">each</span></p>
             </div>
-            <button onclick="removeItem(${index})" class="text-red-500 hover:text-red-700">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path>
-              </svg>
-            </button>
+            <div class="flex items-center justify-between sm:justify-end gap-4">
+              <div class="flex items-center border-2 border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-white dark:bg-gray-800">
+                <button onclick="updateQuantity(${index}, -1)" class="px-3 py-2 hover:bg-primary dark:hover:bg-gray-700 transition-colors text-text-dark dark:text-gray-200 font-semibold">−</button>
+                <span class="px-4 py-2 border-x-2 border-gray-200 dark:border-gray-700 min-w-[3rem] text-center font-semibold text-text-dark dark:text-white">${item.quantity || 1}</span>
+                <button onclick="updateQuantity(${index}, 1)" class="px-3 py-2 hover:bg-primary dark:hover:bg-gray-700 transition-colors text-text-dark dark:text-gray-200 font-semibold">+</button>
+              </div>
+              <div class="text-right">
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Total</p>
+                <p class="text-accent font-bold text-lg">$${itemTotal}</p>
+              </div>
+              <button onclick="removeItem(${index})" class="p-2 text-red-500 hover:text-red-700 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors" title="Remove item">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       `;

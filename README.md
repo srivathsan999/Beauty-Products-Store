@@ -97,9 +97,9 @@ Then navigate to `http://localhost:8000/index.html`
 ## Design System
 
 ### Color Palette
-- **Primary**: #F4C2C2 (Soft Blush Pink)
-- **Secondary**: #FFF4F4 (Very Light Rose)
-- **Accent**: #C65B7C (Rose Mauve)
+- **Primary**: #D4A5A5 (Muted Rose)
+- **Secondary**: #F8F6F4 (Warm Neutral)
+- **Accent**: #A8556F (Sophisticated Burgundy)
 - **Text Dark**: #2A2A2A
 - **White**: #FFFFFF
 

@@ -590,5 +590,23 @@
     width: 100%;
     max-width: 100%;
   }
+  
+  /* ============================================
+     LOGIN PAGE - Mobile View Fixes
+     ============================================ */
+  /* Add top spacing to prevent brand name from touching browser search box */
+  /* Target login/register pages specifically */
+  body.min-h-screen.flex.items-center.justify-center.bg-secondary,
+  body.min-h-screen.flex.items-center.justify-center.bg-secondary.dark\:bg-gray-900 {
+    padding-top: 1.5rem !important;
+    align-items: flex-start !important;
+    padding-bottom: 1rem !important;
+  }
+  
+  /* Ensure login container fits in viewport */
+  body.min-h-screen.flex.items-center.justify-center > div.w-full.max-w-md {
+    max-height: calc(100vh - 2.5rem);
+    overflow-y: auto;
+  }
 }
 
