@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,24 @@
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              primary: '#D4A5A5',
-              secondary: '#F8F6F4',
-              accent: '#A8556F',
-              'text-dark': '#2A2A2A',
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4A5A5',
+                        secondary: '#F8F6F4',
+                        accent: '#A8556F',
+                        'text-dark': '#2A2A2A',
+                    }
+                }
             }
-          }
         }
-      }
     </script>
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/tablet.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="sticky top-0 z-50 glass-strong border-b border-white/20 dark:border-gray-700/20">
@@ -39,74 +41,115 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <!-- Home Dropdown -->
                     <div class="relative group">
-                        <button class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center" aria-expanded="false" aria-haspopup="true">
+                        <button
+                            class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center"
+                            aria-expanded="false" aria-haspopup="true">
                             Home
                             <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <div class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300" role="menu">
+                        <div class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
+                            role="menu">
                             <div class="py-2">
-                                <a href="index.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700" role="menuitem">Home</a>
-                                <a href="home2.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700" role="menuitem">Home 2</a>
+                                <a href="index.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700"
+                                    role="menuitem">Home</a>
+                                <a href="home2.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700"
+                                    role="menuitem">Home 2</a>
                             </div>
                         </div>
                     </div>
-                    
-                    <a href="shop.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Shop</a>
+
+                    <a href="shop.html"
+                        class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Shop</a>
                     <div class="relative group">
-                        <button class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center">
+                        <button
+                            class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center">
                             Categories
                             <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <div class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <div
+                            class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                             <div class="py-2">
-                                <a href="skincare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Skincare</a>
-                                <a href="makeup.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Makeup</a>
-                                <a href="haircare.html" class="block px-4 py-2 text-accent font-semibold hover:bg-primary dark:hover:bg-gray-700">Haircare</a>
-                                <a href="fragrance.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Fragrance</a>
+                                <a href="skincare.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Skincare</a>
+                                <a href="makeup.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Makeup</a>
+                                <a href="haircare.html"
+                                    class="block px-4 py-2 text-accent font-semibold hover:bg-primary dark:hover:bg-gray-700">Haircare</a>
+                                <a href="fragrance.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Fragrance</a>
                             </div>
                         </div>
                     </div>
-                    <a href="blog.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Blog</a>
-                    <a href="about.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">About</a>
-                    <a href="contact.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Contact</a>
-                    
+                    <a href="blog.html"
+                        class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Blog</a>
+                    <a href="about.html"
+                        class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">About</a>
+                    <a href="contact.html"
+                        class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Contact</a>
+
                     <!-- Dashboard Dropdown -->
                     <div class="relative group">
-                        <button class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center">
+                        <button
+                            class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center">
                             Dashboard
                             <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <div class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <div
+                            class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                             <div class="py-2">
-                                <a href="user-dashboard.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">User Dashboard</a>
-                                <a href="admin-dashboard.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Admin Dashboard</a>
+                                <a href="user-dashboard.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">User
+                                    Dashboard</a>
+                                <a href="admin-dashboard.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Admin
+                                    Dashboard</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <a href="cart.html" class="relative p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    <a href="cart.html"
+                        class="relative p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                         </svg>
-                        <span class="cart-count absolute top-0 right-0 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+                        <span
+                            class="cart-count absolute top-0 right-0 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
                     </a>
-                    <button id="theme-toggle" class="p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                    <button id="theme-toggle"
+                        class="p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
+                        <svg id="theme-toggle-light" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                        </svg>
+                        <svg id="theme-toggle-dark" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
                         </svg>
                     </button>
                     <a href="login.html" class="hidden md:block btn-primary">Login</a>
                     <a href="register.html" class="hidden md:block btn-primary">Register</a>
                     <button id="mobile-menu-button" class="md:hidden p-2 text-text-dark dark:text-gray-100">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -114,45 +157,69 @@
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-2">
                     <div class="px-4 py-2">
-                        <button id="mobile-home-toggle" class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
+                        <button id="mobile-home-toggle"
+                            class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
                             <span>Home</span>
                             <svg class="w-4 h-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
                             </svg>
                         </button>
                         <div id="mobile-home-menu" class="hidden pl-4 mt-2 space-y-2">
-                            <a href="index.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home</a>
-                            <a href="home2.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home 2</a>
+                            <a href="index.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home</a>
+                            <a href="home2.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home
+                                2</a>
                         </div>
                     </div>
-                    <a href="shop.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Shop</a>
+                    <a href="shop.html"
+                        class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Shop</a>
                     <div class="px-4 py-2">
-                        <button id="mobile-categories-toggle" class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
+                        <button id="mobile-categories-toggle"
+                            class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
                             <span>Categories</span>
                             <svg class="w-4 h-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
                             </svg>
                         </button>
                         <div id="mobile-categories-menu" class="hidden pl-4 mt-2 space-y-2">
-                            <a href="skincare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Skincare</a>
-                            <a href="makeup.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Makeup</a>
-                            <a href="haircare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Haircare</a>
-                            <a href="fragrance.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Fragrance</a>
+                            <a href="skincare.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Skincare</a>
+                            <a href="makeup.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Makeup</a>
+                            <a href="haircare.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Haircare</a>
+                            <a href="fragrance.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Fragrance</a>
                         </div>
                     </div>
-                    <a href="blog.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Blog</a>
-                    <a href="about.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">About</a>
-                    <a href="contact.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Contact</a>
+                    <a href="blog.html"
+                        class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Blog</a>
+                    <a href="about.html"
+                        class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">About</a>
+                    <a href="contact.html"
+                        class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Contact</a>
                     <div class="px-4 py-2">
-                        <button id="mobile-dashboard-toggle" class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
+                        <button id="mobile-dashboard-toggle"
+                            class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
                             <span>Dashboard</span>
                             <svg class="w-4 h-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
                             </svg>
                         </button>
                         <div id="mobile-dashboard-menu" class="hidden pl-4 mt-2 space-y-2">
-                            <a href="user-dashboard.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">User Dashboard</a>
-                            <a href="admin-dashboard.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Admin Dashboard</a>
+                            <a href="user-dashboard.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">User
+                                Dashboard</a>
+                            <a href="admin-dashboard.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Admin
+                                Dashboard</a>
                         </div>
                     </div>
                     <a href="login.html" class="px-4 py-2 btn-primary text-center">Login</a>
@@ -167,7 +234,8 @@
         <!-- Category Header -->
         <div class="text-center mb-12 fade-on-scroll">
             <h1 class="section-title">Haircare Collection</h1>
-            <p class="section-subtitle">Transform your hair with our premium haircare products. From shampoos to treatments, achieve healthy, lustrous locks.</p>
+            <p class="section-subtitle">Transform your hair with our premium haircare products. From shampoos to
+                treatments, achieve healthy, lustrous locks.</p>
         </div>
 
         <!-- Category Info -->
@@ -176,7 +244,9 @@
                 <div>
                     <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
                         </svg>
                     </div>
                     <h3 class="font-semibold text-lg mb-2">Sulfate-Free</h3>
@@ -185,7 +255,9 @@
                 <div>
                     <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                            </path>
                         </svg>
                     </div>
                     <h3 class="font-semibold text-lg mb-2">Nourishing</h3>
@@ -194,7 +266,8 @@
                 <div>
                     <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
                     <h3 class="font-semibold text-lg mb-2">Quick Results</h3>
@@ -222,10 +295,13 @@
             <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="product-card equal-height fade-on-scroll">
                     <a href="product.html">
-                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Shampoo" class="w-full h-64 object-cover">
+                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Shampoo"
+                            class="w-full h-64 object-cover">
                     </a>
                     <div class="p-4 equal-height-content">
-                        <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Hydrating Shampoo</h3></a>
+                        <a href="product.html">
+                            <h3 class="font-semibold text-lg mb-2 hover:text-accent">Hydrating Shampoo</h3>
+                        </a>
                         <div class="flex items-center mb-2">
                             <div class="flex text-yellow-400">
                                 <span>★★★★★</span>
@@ -233,16 +309,21 @@
                             <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(134)</span>
                         </div>
                         <p class="text-accent font-bold text-xl mb-4">$18.99</p>
-                        <button onclick="addToCart(18, 'Hydrating Shampoo', 18.99, 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        <button
+                            onclick="addToCart(18, 'Hydrating Shampoo', 18.99, 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400')"
+                            class="btn-primary w-full">Add to Cart</button>
                     </div>
                 </div>
-                
+
                 <div class="product-card equal-height fade-on-scroll">
                     <a href="product.html">
-                        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400" alt="Conditioner" class="w-full h-64 object-cover">
+                        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400" alt="Conditioner"
+                            class="w-full h-64 object-cover">
                     </a>
                     <div class="p-4 equal-height-content">
-                        <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Repairing Conditioner</h3></a>
+                        <a href="product.html">
+                            <h3 class="font-semibold text-lg mb-2 hover:text-accent">Repairing Conditioner</h3>
+                        </a>
                         <div class="flex items-center mb-2">
                             <div class="flex text-yellow-400">
                                 <span>★★★★★</span>
@@ -250,16 +331,21 @@
                             <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(128)</span>
                         </div>
                         <p class="text-accent font-bold text-xl mb-4">$20.99</p>
-                        <button onclick="addToCart(19, 'Repairing Conditioner', 20.99, 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        <button
+                            onclick="addToCart(19, 'Repairing Conditioner', 20.99, 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400')"
+                            class="btn-primary w-full">Add to Cart</button>
                     </div>
                 </div>
-                
+
                 <div class="product-card equal-height fade-on-scroll">
                     <a href="product.html">
-                        <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Hair Mask" class="w-full h-64 object-cover">
+                        <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Hair Mask"
+                            class="w-full h-64 object-cover">
                     </a>
                     <div class="p-4 equal-height-content">
-                        <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Deep Conditioning Mask</h3></a>
+                        <a href="product.html">
+                            <h3 class="font-semibold text-lg mb-2 hover:text-accent">Deep Conditioning Mask</h3>
+                        </a>
                         <div class="flex items-center mb-2">
                             <div class="flex text-yellow-400">
                                 <span>★★★★☆</span>
@@ -267,16 +353,21 @@
                             <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(92)</span>
                         </div>
                         <p class="text-accent font-bold text-xl mb-4">$29.99</p>
-                        <button onclick="addToCart(20, 'Deep Conditioning Mask', 29.99, 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        <button
+                            onclick="addToCart(20, 'Deep Conditioning Mask', 29.99, 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400')"
+                            class="btn-primary w-full">Add to Cart</button>
                     </div>
                 </div>
-                
+
                 <div class="product-card equal-height fade-on-scroll">
                     <a href="product.html">
-                        <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400" alt="Hair Oil" class="w-full h-64 object-cover">
+                        <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400" alt="Hair Oil"
+                            class="w-full h-64 object-cover">
                     </a>
                     <div class="p-4 equal-height-content">
-                        <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Argan Hair Oil</h3></a>
+                        <a href="product.html">
+                            <h3 class="font-semibold text-lg mb-2 hover:text-accent">Argan Hair Oil</h3>
+                        </a>
                         <div class="flex items-center mb-2">
                             <div class="flex text-yellow-400">
                                 <span>★★★★★</span>
@@ -284,16 +375,21 @@
                             <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(156)</span>
                         </div>
                         <p class="text-accent font-bold text-xl mb-4">$26.99</p>
-                        <button onclick="addToCart(21, 'Argan Hair Oil', 26.99, 'https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        <button
+                            onclick="addToCart(21, 'Argan Hair Oil', 26.99, 'https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400')"
+                            class="btn-primary w-full">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="product-card equal-height fade-on-scroll">
                     <a href="product.html">
-                        <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=400" alt="Hair Serum" class="w-full h-64 object-cover">
+                        <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=400" alt="Hair Serum"
+                            class="w-full h-64 object-cover">
                     </a>
                     <div class="p-4 equal-height-content">
-                        <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Heat Protection Serum</h3></a>
+                        <a href="product.html">
+                            <h3 class="font-semibold text-lg mb-2 hover:text-accent">Heat Protection Serum</h3>
+                        </a>
                         <div class="flex items-center mb-2">
                             <div class="flex text-yellow-400">
                                 <span>★★★★☆</span>
@@ -301,16 +397,21 @@
                             <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(87)</span>
                         </div>
                         <p class="text-accent font-bold text-xl mb-4">$24.99</p>
-                        <button onclick="addToCart(22, 'Heat Protection Serum', 24.99, 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        <button
+                            onclick="addToCart(22, 'Heat Protection Serum', 24.99, 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=400')"
+                            class="btn-primary w-full">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="product-card equal-height fade-on-scroll">
                     <a href="product.html">
-                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400" alt="Dry Shampoo" class="w-full h-64 object-cover">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400" alt="Dry Shampoo"
+                            class="w-full h-64 object-cover">
                     </a>
                     <div class="p-4 equal-height-content">
-                        <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Dry Shampoo</h3></a>
+                        <a href="product.html">
+                            <h3 class="font-semibold text-lg mb-2 hover:text-accent">Dry Shampoo</h3>
+                        </a>
                         <div class="flex items-center mb-2">
                             <div class="flex text-yellow-400">
                                 <span>★★★★★</span>
@@ -318,16 +419,21 @@
                             <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(203)</span>
                         </div>
                         <p class="text-accent font-bold text-xl mb-4">$16.99</p>
-                        <button onclick="addToCart(23, 'Dry Shampoo', 16.99, 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        <button
+                            onclick="addToCart(23, 'Dry Shampoo', 16.99, 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400')"
+                            class="btn-primary w-full">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="product-card equal-height fade-on-scroll">
                     <a href="product.html">
-                        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400" alt="Hair Spray" class="w-full h-64 object-cover">
+                        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400" alt="Hair Spray"
+                            class="w-full h-64 object-cover">
                     </a>
                     <div class="p-4 equal-height-content">
-                        <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Volumizing Hair Spray</h3></a>
+                        <a href="product.html">
+                            <h3 class="font-semibold text-lg mb-2 hover:text-accent">Volumizing Hair Spray</h3>
+                        </a>
                         <div class="flex items-center mb-2">
                             <div class="flex text-yellow-400">
                                 <span>★★★★☆</span>
@@ -335,16 +441,21 @@
                             <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(75)</span>
                         </div>
                         <p class="text-accent font-bold text-xl mb-4">$21.99</p>
-                        <button onclick="addToCart(24, 'Volumizing Hair Spray', 21.99, 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        <button
+                            onclick="addToCart(24, 'Volumizing Hair Spray', 21.99, 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400')"
+                            class="btn-primary w-full">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="product-card equal-height fade-on-scroll">
                     <a href="product.html">
-                        <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Scalp Treatment" class="w-full h-64 object-cover">
+                        <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400"
+                            alt="Scalp Treatment" class="w-full h-64 object-cover">
                     </a>
                     <div class="p-4 equal-height-content">
-                        <a href="product.html"><h3 class="font-semibold text-lg mb-2 hover:text-accent">Scalp Treatment</h3></a>
+                        <a href="product.html">
+                            <h3 class="font-semibold text-lg mb-2 hover:text-accent">Scalp Treatment</h3>
+                        </a>
                         <div class="flex items-center mb-2">
                             <div class="flex text-yellow-400">
                                 <span>★★★★★</span>
@@ -352,17 +463,22 @@
                             <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(98)</span>
                         </div>
                         <p class="text-accent font-bold text-xl mb-4">$34.99</p>
-                        <button onclick="addToCart(25, 'Scalp Treatment', 34.99, 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400')" class="btn-primary w-full">Add to Cart</button>
+                        <button
+                            onclick="addToCart(25, 'Scalp Treatment', 34.99, 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400')"
+                            class="btn-primary w-full">Add to Cart</button>
                     </div>
                 </div>
             </div>
 
             <!-- Pagination -->
             <div class="flex justify-center items-center gap-2 mt-12">
-                <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">Previous</button>
+                <button
+                    class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">Previous</button>
                 <button class="px-4 py-2 rounded-lg bg-accent text-white">1</button>
-                <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">2</button>
-                <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">Next</button>
+                <button
+                    class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">2</button>
+                <button
+                    class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">Next</button>
             </div>
         </div>
     </section>
@@ -378,29 +494,47 @@
                         </div>
                         <span class="font-heading text-xl font-bold">BeautyStore</span>
                     </div>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">Your trusted beauty destination for premium products and expert care.</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Your trusted beauty destination for premium
+                        products and expert care.</p>
                 </div>
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Home</a></li>
-                        <li><a href="shop.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shop</a></li>
-                        <li><a href="about.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
-                        <li><a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Contact</a></li>
+                        <li><a href="index.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Home</a>
+                        </li>
+                        <li><a href="shop.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shop</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">About
+                                Us</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Contact</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Policies</h3>
                     <ul class="space-y-2">
-                        <li><a href="privacy.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Terms of Service</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shipping Policy</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Return Policy</a></li>
+                        <li><a href="privacy.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Privacy
+                                Policy</a></li>
+                        <li><a href="terms.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Terms
+                                of Service</a></li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shipping
+                                Policy</a></li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Return
+                                Policy</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Stay Connected</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Subscribe to get special offers and updates</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Subscribe to get special offers and updates
+                    </p>
                     <form class="flex flex-col gap-2">
                         <input type="email" placeholder="Your email" class="input-field text-sm" required>
                         <button type="submit" class="btn-primary text-sm">Subscribe</button>
@@ -408,7 +542,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-600 dark:text-gray-400 text-sm">&copy; 2025 BeautyStore. All rights reserved.</p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">&copy; 2026 BeautyStore. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -417,5 +551,5 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/category-sort.js"></script>
 </body>
-</html>
 
+</html>

@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mutations.forEach(function(mutation) {
           if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
             if (filterMenu.classList.contains('hidden')) {
-              filterMenuContent.style.transform = 'translateX(100%)';
+              filterMenuContent.style.transform = 'translateX(-100%)';
             } else {
               setTimeout(function() {
                 filterMenuContent.style.transform = 'translateX(0)';
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Initialize
       if (filterMenu.classList.contains('hidden')) {
-        filterMenuContent.style.transform = 'translateX(100%)';
+        filterMenuContent.style.transform = 'translateX(-100%)';
       }
     }
   });

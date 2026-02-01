@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,24 @@
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              primary: '#D4A5A5',
-              secondary: '#F8F6F4',
-              accent: '#A8556F',
-              'text-dark': '#2A2A2A',
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4A5A5',
+                        secondary: '#F8F6F4',
+                        accent: '#A8556F',
+                        'text-dark': '#2A2A2A',
+                    }
+                }
             }
-          }
         }
-      }
     </script>
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/tablet.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="sticky top-0 z-50 glass-strong border-b border-white/20 dark:border-gray-700/20">
@@ -39,74 +41,114 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <!-- Home Dropdown -->
                     <div class="relative group">
-                        <button class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center" aria-expanded="false" aria-haspopup="true">
+                        <button
+                            class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center"
+                            aria-expanded="false" aria-haspopup="true">
                             Home
                             <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <div class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300" role="menu">
+                        <div class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
+                            role="menu">
                             <div class="py-2">
-                                <a href="index.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700" role="menuitem">Home</a>
-                                <a href="home2.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700" role="menuitem">Home 2</a>
+                                <a href="index.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700"
+                                    role="menuitem">Home</a>
+                                <a href="home2.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700"
+                                    role="menuitem">Home 2</a>
                             </div>
                         </div>
                     </div>
-                    
-                    <a href="shop.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Shop</a>
+
+                    <a href="shop.html"
+                        class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Shop</a>
                     <div class="relative group">
-                        <button class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center">
+                        <button
+                            class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center">
                             Categories
                             <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <div class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <div
+                            class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                             <div class="py-2">
-                                <a href="skincare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Skincare</a>
-                                <a href="makeup.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Makeup</a>
-                                <a href="haircare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Haircare</a>
-                                <a href="fragrance.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Fragrance</a>
+                                <a href="skincare.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Skincare</a>
+                                <a href="makeup.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Makeup</a>
+                                <a href="haircare.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Haircare</a>
+                                <a href="fragrance.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Fragrance</a>
                             </div>
                         </div>
                     </div>
                     <a href="blog.html" class="text-accent font-medium">Blog</a>
-                    <a href="about.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">About</a>
-                    <a href="contact.html" class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Contact</a>
-                    
+                    <a href="about.html"
+                        class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">About</a>
+                    <a href="contact.html"
+                        class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium">Contact</a>
+
                     <!-- Dashboard Dropdown -->
                     <div class="relative group">
-                        <button class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center">
+                        <button
+                            class="text-text-dark dark:text-gray-100 hover:text-accent transition-colors font-medium flex items-center">
                             Dashboard
                             <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <div class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <div
+                            class="absolute left-0 mt-2 w-48 glass-strong rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                             <div class="py-2">
-                                <a href="user-dashboard.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">User Dashboard</a>
-                                <a href="admin-dashboard.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Admin Dashboard</a>
+                                <a href="user-dashboard.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">User
+                                    Dashboard</a>
+                                <a href="admin-dashboard.html"
+                                    class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700">Admin
+                                    Dashboard</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <a href="cart.html" class="relative p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    <a href="cart.html"
+                        class="relative p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                         </svg>
-                        <span class="cart-count absolute top-0 right-0 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+                        <span
+                            class="cart-count absolute top-0 right-0 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
                     </a>
-                    <button id="theme-toggle" class="p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                    <button id="theme-toggle"
+                        class="p-2 text-text-dark dark:text-gray-100 hover:text-accent transition-colors">
+                        <svg id="theme-toggle-light" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                        </svg>
+                        <svg id="theme-toggle-dark" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
                         </svg>
                     </button>
                     <a href="login.html" class="hidden md:block btn-primary">Login</a>
                     <a href="register.html" class="hidden md:block btn-primary">Register</a>
                     <button id="mobile-menu-button" class="md:hidden p-2 text-text-dark dark:text-gray-100">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -114,45 +156,68 @@
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-2">
                     <div class="px-4 py-2">
-                        <button id="mobile-home-toggle" class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
+                        <button id="mobile-home-toggle"
+                            class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
                             <span>Home</span>
                             <svg class="w-4 h-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
                             </svg>
                         </button>
                         <div id="mobile-home-menu" class="hidden pl-4 mt-2 space-y-2">
-                            <a href="index.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home</a>
-                            <a href="home2.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home 2</a>
+                            <a href="index.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home</a>
+                            <a href="home2.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Home
+                                2</a>
                         </div>
                     </div>
-                    <a href="shop.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Shop</a>
+                    <a href="shop.html"
+                        class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Shop</a>
                     <div class="px-4 py-2">
-                        <button id="mobile-categories-toggle" class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
+                        <button id="mobile-categories-toggle"
+                            class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
                             <span>Categories</span>
                             <svg class="w-4 h-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
                             </svg>
                         </button>
                         <div id="mobile-categories-menu" class="hidden pl-4 mt-2 space-y-2">
-                            <a href="skincare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Skincare</a>
-                            <a href="makeup.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Makeup</a>
-                            <a href="haircare.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Haircare</a>
-                            <a href="fragrance.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Fragrance</a>
+                            <a href="skincare.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Skincare</a>
+                            <a href="makeup.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Makeup</a>
+                            <a href="haircare.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Haircare</a>
+                            <a href="fragrance.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Fragrance</a>
                         </div>
                     </div>
                     <a href="blog.html" class="px-4 py-2 text-accent font-semibold">Blog</a>
-                    <a href="about.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">About</a>
-                    <a href="contact.html" class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Contact</a>
+                    <a href="about.html"
+                        class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">About</a>
+                    <a href="contact.html"
+                        class="px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Contact</a>
                     <div class="px-4 py-2">
-                        <button id="mobile-dashboard-toggle" class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
+                        <button id="mobile-dashboard-toggle"
+                            class="flex items-center justify-between w-full text-text-dark dark:text-gray-100 font-semibold hover:text-accent">
                             <span>Dashboard</span>
                             <svg class="w-4 h-4 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
                             </svg>
                         </button>
                         <div id="mobile-dashboard-menu" class="hidden pl-4 mt-2 space-y-2">
-                            <a href="user-dashboard.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">User Dashboard</a>
-                            <a href="admin-dashboard.html" class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Admin Dashboard</a>
+                            <a href="user-dashboard.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">User
+                                Dashboard</a>
+                            <a href="admin-dashboard.html"
+                                class="block px-4 py-2 text-text-dark dark:text-gray-100 hover:bg-primary dark:hover:bg-gray-700 rounded">Admin
+                                Dashboard</a>
                         </div>
                     </div>
                     <a href="login.html" class="px-4 py-2 btn-primary text-center">Login</a>
@@ -167,7 +232,8 @@
         <!-- Blog Header -->
         <div class="text-center mb-12 fade-on-scroll">
             <h1 class="section-title">Beauty Blog</h1>
-            <p class="section-subtitle">Discover the latest beauty tips, trends, and expert advice to enhance your beauty routine.</p>
+            <p class="section-subtitle">Discover the latest beauty tips, trends, and expert advice to enhance your
+                beauty routine.</p>
         </div>
 
         <!-- Featured Post -->
@@ -175,12 +241,16 @@
             <a href="blog-details.html?id=featured" class="product-card overflow-hidden block">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
                     <div class="aspect-video lg:aspect-auto">
-                        <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800" alt="Featured Post" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800"
+                            alt="Featured Post" class="w-full h-full object-cover">
                     </div>
                     <div class="p-8 lg:p-12 flex flex-col justify-center">
                         <span class="text-accent font-semibold text-sm mb-2">FEATURED ARTICLE</span>
-                        <h2 class="text-3xl font-heading font-bold mb-4 hover:text-accent transition-colors">10 Essential Skincare Tips for Glowing Skin</h2>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6">Discover expert skincare secrets that will transform your routine and give you that radiant glow you've been dreaming of. From morning to night, learn the best practices for healthy, beautiful skin.</p>
+                        <h2 class="text-3xl font-heading font-bold mb-4 hover:text-accent transition-colors">10
+                            Essential Skincare Tips for Glowing Skin</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">Discover expert skincare secrets that will
+                            transform your routine and give you that radiant glow you've been dreaming of. From morning
+                            to night, learn the best practices for healthy, beautiful skin.</p>
                         <div class="flex items-center gap-4 mb-6">
                             <div class="flex items-center gap-2">
                                 <div class="w-10 h-10 bg-primary rounded-full"></div>
@@ -189,9 +259,10 @@
                                     <p class="text-xs text-gray-500">Beauty Expert</p>
                                 </div>
                             </div>
-                            <span class="text-sm text-gray-500">January 15, 2025</span>
+                            <span class="text-sm text-gray-500">January 15, 2026</span>
                         </div>
-                        <span class="text-accent hover:text-accent/80 font-semibold text-sm self-start">Read More →</span>
+                        <span class="text-accent hover:text-accent/80 font-semibold text-sm self-start">Read More
+                            →</span>
                     </div>
                 </div>
             </a>
@@ -202,107 +273,147 @@
             <!-- Blog Post 1 -->
             <article class="product-card fade-on-scroll flex flex-col h-full">
                 <a href="blog-details.html?id=1" class="flex-shrink-0">
-                    <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Blog Post" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Blog Post"
+                        class="w-full h-48 object-cover">
                 </a>
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="text-accent font-semibold text-xs">SKINCARE</span>
-                    <a href="blog-details.html?id=1"><h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">How to Build the Perfect Skincare Routine</h3></a>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">Learn the step-by-step process of creating a skincare routine that works for your unique skin type and concerns.</p>
+                    <a href="blog-details.html?id=1">
+                        <h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">How to Build the Perfect
+                            Skincare Routine</h3>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">Learn the step-by-step process of
+                        creating a skincare routine that works for your unique skin type and concerns.</p>
                     <div class="text-sm text-gray-500 mt-auto mb-3">
-                        <span>January 12, 2025</span>
+                        <span>January 12, 2026</span>
                     </div>
-                    <a href="blog-details.html?id=1" class="text-accent hover:text-accent/80 font-semibold text-sm self-start">Read More →</a>
+                    <a href="blog-details.html?id=1"
+                        class="text-accent hover:text-accent/80 font-semibold text-sm self-start">Read More →</a>
                 </div>
             </article>
 
             <!-- Blog Post 2 -->
             <article class="product-card fade-on-scroll flex flex-col h-full">
                 <a href="blog-details.html?id=2" class="flex-shrink-0">
-                    <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400" alt="Blog Post" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400" alt="Blog Post"
+                        class="w-full h-48 object-cover">
                 </a>
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="text-accent font-semibold text-xs">MAKEUP</span>
-                    <a href="blog-details.html?id=2"><h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">Makeup Trends for 2025</h3></a>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow blog-card-paragraph-spacing">Explore the hottest makeup trends that are taking the beauty world by storm this year.</p>
+                    <a href="blog-details.html?id=2">
+                        <h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">Makeup Trends for 2026
+                        </h3>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow blog-card-paragraph-spacing">
+                        Explore the hottest makeup trends that are taking the beauty world by storm this year.</p>
                     <div class="text-sm text-gray-500 mt-auto mb-3">
-                        <span>January 10, 2025</span>
+                        <span>January 10, 2026</span>
                     </div>
-                    <a href="blog-details.html?id=2" class="text-accent hover:text-accent/80 font-semibold text-sm self-start">Read More →</a>
+                    <a href="blog-details.html?id=2"
+                        class="text-accent hover:text-accent/80 font-semibold text-sm self-start">Read More →</a>
                 </div>
             </article>
 
             <!-- Blog Post 3 -->
             <article class="product-card fade-on-scroll flex flex-col h-full">
                 <a href="blog-details.html?id=3" class="flex-shrink-0">
-                    <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Blog Post" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400" alt="Blog Post"
+                        class="w-full h-48 object-cover">
                 </a>
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="text-accent font-semibold text-xs">HAIRCARE</span>
-                    <a href="blog-details.html?id=3"><h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">Natural Hair Care Remedies</h3></a>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow blog-card-paragraph-spacing">Discover natural ingredients and DIY treatments that can transform your hair health.</p>
+                    <a href="blog-details.html?id=3">
+                        <h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">Natural Hair Care
+                            Remedies</h3>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow blog-card-paragraph-spacing">
+                        Discover natural ingredients and DIY treatments that can transform your hair health.</p>
                     <div class="text-sm text-gray-500 mt-auto mb-3">
-                        <span>January 8, 2025</span>
+                        <span>January 8, 2026</span>
                     </div>
-                    <a href="blog-details.html?id=3" class="text-accent hover:text-accent/80 font-semibold text-sm self-start">Read More →</a>
+                    <a href="blog-details.html?id=3"
+                        class="text-accent hover:text-accent/80 font-semibold text-sm self-start">Read More →</a>
                 </div>
             </article>
 
             <!-- Blog Post 4 -->
             <article class="product-card fade-on-scroll flex flex-col h-full">
                 <a href="blog-details.html?id=4" class="flex-shrink-0">
-                    <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400" alt="Blog Post" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400" alt="Blog Post"
+                        class="w-full h-48 object-cover">
                 </a>
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="text-accent font-semibold text-xs">WELLNESS</span>
-                    <a href="blog-details.html?id=4"><h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">Beauty From Within: Nutrition Tips</h3></a>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">How your diet affects your skin and hair, plus foods that promote natural beauty.</p>
+                    <a href="blog-details.html?id=4">
+                        <h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">Beauty From Within:
+                            Nutrition Tips</h3>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">How your diet affects your skin
+                        and hair, plus foods that promote natural beauty.</p>
                     <div class="text-sm text-gray-500 mt-auto mb-3">
-                        <span>January 5, 2025</span>
+                        <span>January 5, 2026</span>
                     </div>
-                    <a href="blog-details.html?id=4" class="text-accent hover:text-accent/80 font-semibold text-sm self-start">Read More →</a>
+                    <a href="blog-details.html?id=4"
+                        class="text-accent hover:text-accent/80 font-semibold text-sm self-start">Read More →</a>
                 </div>
             </article>
 
             <!-- Blog Post 5 -->
             <article class="product-card fade-on-scroll flex flex-col h-full">
                 <a href="blog-details.html?id=5" class="flex-shrink-0">
-                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=400" alt="Blog Post" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=400" alt="Blog Post"
+                        class="w-full h-48 object-cover">
                 </a>
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="text-accent font-semibold text-xs">TUTORIAL</span>
-                    <a href="blog-details.html?id=5"><h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">5-Minute Morning Beauty Routine</h3></a>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">Quick and effective beauty routine for busy mornings that keeps you looking great.</p>
+                    <a href="blog-details.html?id=5">
+                        <h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">5-Minute Morning Beauty
+                            Routine</h3>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">Quick and effective beauty
+                        routine for busy mornings that keeps you looking great.</p>
                     <div class="text-sm text-gray-500 mt-auto mb-3">
-                        <span>January 3, 2025</span>
+                        <span>January 3, 2026</span>
                     </div>
-                    <a href="blog-details.html?id=5" class="text-accent hover:text-accent/80 font-semibold text-sm self-start">Read More →</a>
+                    <a href="blog-details.html?id=5"
+                        class="text-accent hover:text-accent/80 font-semibold text-sm self-start">Read More →</a>
                 </div>
             </article>
 
             <!-- Blog Post 6 -->
             <article class="product-card fade-on-scroll flex flex-col h-full">
                 <a href="blog-details.html?id=6" class="flex-shrink-0">
-                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400" alt="Blog Post" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400" alt="Blog Post"
+                        class="w-full h-48 object-cover">
                 </a>
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="text-accent font-semibold text-xs">FRAGRANCE</span>
-                    <a href="blog-details.html?id=6"><h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">How to Choose Your Signature Scent</h3></a>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">A complete guide to finding the perfect fragrance that matches your personality.</p>
+                    <a href="blog-details.html?id=6">
+                        <h3 class="text-xl font-heading font-bold mt-2 mb-3 hover:text-accent">How to Choose Your
+                            Signature Scent</h3>
+                    </a>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow">A complete guide to finding the
+                        perfect fragrance that matches your personality.</p>
                     <div class="text-sm text-gray-500 mt-auto mb-3">
-                        <span>January 1, 2025</span>
+                        <span>January 1, 2026</span>
                     </div>
-                    <a href="blog-details.html?id=6" class="text-accent hover:text-accent/80 font-semibold text-sm self-start">Read More →</a>
+                    <a href="blog-details.html?id=6"
+                        class="text-accent hover:text-accent/80 font-semibold text-sm self-start">Read More →</a>
                 </div>
             </article>
         </div>
 
         <!-- Pagination -->
         <div class="flex justify-center items-center gap-2">
-            <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">Previous</button>
+            <button
+                class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">Previous</button>
             <button class="px-4 py-2 rounded-lg bg-accent text-white">1</button>
-            <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">2</button>
-            <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">3</button>
-            <button class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">Next</button>
+            <button
+                class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">2</button>
+            <button
+                class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">3</button>
+            <button
+                class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-primary dark:hover:bg-gray-700">Next</button>
         </div>
     </section>
 
@@ -317,29 +428,47 @@
                         </div>
                         <span class="font-heading text-xl font-bold">BeautyStore</span>
                     </div>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">Your trusted beauty destination for premium products and expert care.</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Your trusted beauty destination for premium
+                        products and expert care.</p>
                 </div>
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Home</a></li>
-                        <li><a href="shop.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shop</a></li>
-                        <li><a href="about.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
-                        <li><a href="contact.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Contact</a></li>
+                        <li><a href="index.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Home</a>
+                        </li>
+                        <li><a href="shop.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shop</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">About
+                                Us</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Contact</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Policies</h3>
                     <ul class="space-y-2">
-                        <li><a href="privacy.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Terms of Service</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shipping Policy</a></li>
-                        <li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Return Policy</a></li>
+                        <li><a href="privacy.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Privacy
+                                Policy</a></li>
+                        <li><a href="terms.html"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Terms
+                                of Service</a></li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Shipping
+                                Policy</a></li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-400 hover:text-accent transition-colors text-sm">Return
+                                Policy</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="font-semibold text-lg mb-4">Stay Connected</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Subscribe to get special offers and updates</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Subscribe to get special offers and updates
+                    </p>
                     <form class="flex flex-col gap-2">
                         <input type="email" placeholder="Your email" class="input-field text-sm" required>
                         <button type="submit" class="btn-primary text-sm">Subscribe</button>
@@ -347,7 +476,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-600 dark:text-gray-400 text-sm">&copy; 2025 BeautyStore. All rights reserved.</p>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">&copy; 2026 BeautyStore. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -355,5 +484,5 @@
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
-</html>
 
+</html>
